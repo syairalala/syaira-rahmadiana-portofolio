@@ -25,8 +25,8 @@
 
         :root {
             --background: #060b19;          /* Deep Cosmic Space */
-            --surface: #0e172e;             /* Frozen Dark Blue */
-            --surface-2: #162444;           /* Ice Shadow */
+            --surface: rgba(14, 23, 46, 0.6);/* Ice Card Overlay */
+            --surface-2: rgba(22, 36, 68, 0.7);
             --blue: #8ae2ff;                /* Elsa Ice Cyan */
             --sage: #c2e9ff;                /* Frost White Blue */
             --purple-glow: #7a5cff;         /* Magical Galaxy Purple */
@@ -215,23 +215,23 @@
         .about-main p { color: var(--gray); font-size: 15px; margin-bottom: 25px; }
         .about-main .big-text { color: var(--white); font-size: 28px; line-height: 1.3; }
         .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-        .fact { padding: 25px; background: var(--surface); transition: background 0.3s ease; }
-        .fact:hover { background: var(--surface-2); }
+        .fact { padding: 25px; background: rgba(14, 23, 46, 0.7); backdrop-filter: blur(10px); transition: background 0.3s ease; }
+        .fact:hover { background: rgba(22, 36, 68, 0.8); }
         .fact span { display: block; color: var(--gray); font-family: "DM Mono", monospace; font-size: 9px; margin-bottom: 18px; }
         .fact strong { display: block; font-size: 16px; margin-bottom: 4px; color: var(--blue); }
         .fact small { color: var(--gray); font-size: 10px; }
 
-        /* SERVICES */
-        .what-i-do { background: rgba(14, 23, 46, 0.5); backdrop-filter: blur(10px); }
+        /* SERVICES (TRANSPARENT BACKGROUND) */
+        .what-i-do { background: transparent; backdrop-filter: none; }
         .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-        .service-card { padding: 30px; border: 1px solid var(--border); background: rgba(6, 11, 25, 0.6); border-radius: 16px; position: relative; transition: all 0.3s ease; }
+        .service-card { padding: 30px; border: 1px solid var(--border); background: rgba(14, 23, 46, 0.5); backdrop-filter: blur(10px); border-radius: 16px; position: relative; transition: all 0.3s ease; }
         .service-card:hover { transform: translateY(-8px); border-color: var(--blue); box-shadow: 0 10px 30px rgba(138, 226, 255, 0.15); }
         .service-number { position: absolute; top: 25px; right: 25px; color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 10px; }
         .service-icon { width: 55px; height: 55px; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 22px; margin-bottom: 80px; background: rgba(138, 226, 255, 0.05); }
         .service-card h3 { font-size: 25px; margin-bottom: 15px; }
         .service-card p { color: var(--gray); font-size: 13px; margin-bottom: 25px; }
         .service-tags { display: flex; gap: 6px; }
-        .service-tags span { padding: 6px 10px; border: 1px solid var(--border); border-radius: 20px; color: var(--gray); font-family: "DM Mono", monospace; font-size: 8px; background: rgba(14, 23, 46, 0.8); }
+        .service-tags span { padding: 6px 10px; border: 1px solid var(--border); border-radius: 20px; color: var(--gray); font-family: "DM Mono", monospace; font-size: 8px; background: rgba(6, 11, 25, 0.8); }
 
         /* SKILLS */
         .skill-group { padding: 35px 0; display: grid; grid-template-columns: 35% 1fr; border-bottom: 1px solid var(--border); }
@@ -239,12 +239,12 @@
         .skill-title span { color: var(--blue); font-family: "DM Mono", monospace; font-size: 10px; }
         .skill-title h3 { font-size: 13px; letter-spacing: 1px; }
         .skill-items { display: flex; flex-wrap: wrap; gap: 8px; }
-        .skill-items span { padding: 9px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; color: var(--white); font-size: 11px; transition: 0.3s; }
+        .skill-items span { padding: 9px 16px; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; color: var(--white); font-size: 11px; transition: 0.3s; }
         .skill-items span:hover { border-color: var(--blue); box-shadow: 0 0 10px rgba(138, 226, 255, 0.2); }
 
         /* PROJECTS */
-        .project.featured { display: grid; grid-template-columns: 1.4fr 0.8fr; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
-        .project-visual { padding: 45px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, #1b2f56, #0e172e 70%); }
+        .project.featured { display: grid; grid-template-columns: 1.4fr 0.8fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+        .project-visual { padding: 45px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, rgba(27, 47, 86, 0.5), rgba(14, 23, 46, 0.8) 70%); }
         .phone-stack { position: relative; width: 210px; }
         .phone-frame { border-radius: 22px; overflow: hidden; border: 4px solid #1a2c4e; box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
         .phone-frame.secondary { position: absolute; top: -35px; left: -75px; width: 175px; transform: rotate(-11deg); opacity: 0.55; }
@@ -260,7 +260,7 @@
         .project-button:hover { background: var(--blue); color: var(--background); }
 
         .project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
-        .small-project { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease; }
+        .small-project { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease; }
         .small-project:hover { transform: translateY(-5px); border-color: var(--blue); }
         .project-image { height: 250px; position: relative; overflow: hidden; }
         .project-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -271,8 +271,8 @@
         .small-project-info p { color: var(--gray); font-size: 12px; margin-bottom: 20px; }
         .project-tools { color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 8px; }
 
-        /* EXPERIENCE & GALLERY */
-        .experience { background: rgba(14, 23, 46, 0.5); backdrop-filter: blur(10px); }
+        /* EXPERIENCE & GALLERY (TRANSPARENT BACKGROUND) */
+        .experience { background: transparent; backdrop-filter: none; }
         .experience-item { display: grid; grid-template-columns: 220px 1fr; gap: 60px; padding: 45px 0; border-top: 1px solid var(--border); }
         .experience-year { color: var(--gray); font-family: "DM Mono", monospace; font-size: 10px; }
         .experience-content span { color: var(--blue); font-family: "DM Mono", monospace; font-size: 8px; }
@@ -283,13 +283,13 @@
 
         .activity-gallery { margin-top: 80px; }
         .gallery-grid { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 12px; height: 350px; }
-        .gallery-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; position: relative; overflow: hidden; }
+        .gallery-item { background: rgba(14, 23, 46, 0.6); border: 1px solid var(--border); border-radius: 12px; position: relative; overflow: hidden; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
         .gallery-item span { position: absolute; bottom: 12px; left: 12px; padding: 6px 9px; background: rgba(6, 11, 25, 0.85); color: var(--white); font-family: "DM Mono", monospace; font-size: 8px; border: 1px solid var(--border); }
 
         /* ACHIEVEMENTS & CERTIFICATES */
-        .achievement-card { display: grid; grid-template-columns: 0.7fr 1.3fr; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
-        .achievement-left { padding: 45px; background: linear-gradient(145deg, #1b2e54, #0e172e); }
+        .achievement-card { display: grid; grid-template-columns: 0.7fr 1.3fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+        .achievement-left { padding: 45px; background: linear-gradient(145deg, rgba(27, 46, 84, 0.6), rgba(14, 23, 46, 0.8)); }
         .achievement-left h3 { font-size: 60px; line-height: 0.85; margin-top: 80px; color: var(--blue); text-shadow: 0 0 15px rgba(138, 226, 255, 0.3); }
         .achievement-right { padding: 45px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
         .achievement-text p { color: var(--gray); font-size: 14px; margin-bottom: 20px; }
@@ -298,7 +298,7 @@
         .achievement-image img { width: 100%; height: 100%; object-fit: cover; }
 
         .certificate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .certificate-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: 0.3s; }
+        .certificate-card { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: 0.3s; }
         .certificate-card:hover { border-color: var(--blue); }
         .certificate-image { height: 230px; overflow: hidden; }
         .certificate-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -308,7 +308,7 @@
         .certificate-info p { color: var(--gray); font-size: 12px; }
 
         /* CONTACT & FOOTER */
-        .contact { padding: 150px 8%; text-align: center; background: radial-gradient(circle at center, #182848, #060b19 70%); }
+        .contact { padding: 150px 8%; text-align: center; background: transparent; }
         .contact p { color: var(--blue); font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: 3px; margin-bottom: 25px; }
         .contact h2 { font-size: clamp(50px, 8vw, 100px); line-height: 0.9; margin-bottom: 45px; }
         .contact h2 span { color: var(--blue); text-shadow: 0 0 20px rgba(138, 226, 255, 0.4); }
