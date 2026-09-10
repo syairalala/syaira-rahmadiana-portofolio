@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
-    
-    <!-- Google Fonts & FontAwesome Icons -->
+    <title>Syaira Rahmadiana | Information Systems</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================
@@ -70,7 +68,6 @@
 
         img {
             max-width: 100%;
-            height: auto;
             display: block;
             transition: transform 0.5s ease;
         }
@@ -168,14 +165,14 @@
         }
 
         .hero-label { color: var(--blue); font-family: "DM Mono", monospace; font-size: 11px; letter-spacing: 3px; margin-bottom: 15px; }
-        .hero h1 { font-size: clamp(45px, 7vw, 110px); line-height: 0.9; letter-spacing: -3px; margin-bottom: 25px; text-align: left; }
+        .hero h1 { font-size: clamp(65px, 8vw, 110px); line-height: 0.85; letter-spacing: -5px; margin-bottom: 25px; text-align: left; }
         .hero h1 span { color: var(--blue); text-shadow: 0 0 20px rgba(138, 226, 255, 0.4); }
         .typing-cursor { display: inline-block; width: 3px; height: 1em; background-color: var(--blue); margin-left: 4px; vertical-align: middle; animation: blink 0.8s infinite; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        .hero h2 { font-size: clamp(18px, 2.2vw, 30px); line-height: 1.3; font-weight: 500; margin-bottom: 20px; text-align: left; }
+        .hero h2 { font-size: clamp(20px, 2.5vw, 30px); line-height: 1.2; font-weight: 500; margin-bottom: 20px; text-align: left; }
         .hero h2 span { color: var(--sage); }
         .hero-description { color: var(--gray); font-size: 15px; margin-bottom: 30px; }
-        .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+        .hero-buttons { display: flex; gap: 12px; }
         .button-primary { padding: 14px 24px; border-radius: 30px; font-size: 12px; background: linear-gradient(135deg, var(--blue), #5c9eff); color: var(--background); font-weight: 600; box-shadow: 0 0 20px rgba(138, 226, 255, 0.3); transition: all 0.3s; }
         .button-primary:hover { box-shadow: 0 0 30px rgba(138, 226, 255, 0.6); transform: translateY(-2px); }
         .button-secondary { padding: 14px 24px; border-radius: 30px; font-size: 12px; border: 1px solid var(--border); background: rgba(14, 23, 46, 0.4); backdrop-filter: blur(10px); transition: all 0.3s; }
@@ -195,7 +192,7 @@
         .card-top { height: 45px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); font-family: "DM Mono", monospace; font-size: 10px; color: var(--gray); }
         .window-buttons { display: flex; gap: 6px; }
         .window-buttons i { width: 8px; height: 8px; border-radius: 50%; background: var(--dark-gray); }
-        .system-body { padding: 25px; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 20px; }
+        .system-body { padding: 30px; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 20px; }
         .photo-frame { aspect-ratio: 0.82; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 0 15px rgba(138, 226, 255, 0.1); }
         .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
         .mono { font-family: "DM Mono", monospace; font-size: 8px; }
@@ -213,12 +210,13 @@
         .section { max-width: 1250px; margin: auto; padding: 70px 7%; }
         .section-heading { margin-bottom: 35px; }
         .section-heading p { color: var(--gray); font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; text-align: left; }
-        .section-heading h2 { font-size: clamp(28px, 4vw, 52px); line-height: 1.15; letter-spacing: -1px; text-align: left; }
+        /* JUDUL TULISAN LURUS KE SAMPING */
+        .section-heading h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.1; letter-spacing: -2px; text-align: left; white-space: nowrap; }
 
         /* ABOUT */
-        .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; }
+        .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; }
         .about-main p { color: var(--gray); font-size: 14px; margin-bottom: 20px; }
-        .about-main .big-text { color: var(--white); font-size: clamp(18px, 2vw, 24px); line-height: 1.35; margin-bottom: 20px; }
+        .about-main .big-text { color: var(--white); font-size: 24px; line-height: 1.35; margin-bottom: 20px; }
         .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; height: fit-content; }
         .fact { padding: 20px; background: rgba(14, 23, 46, 0.7); backdrop-filter: blur(10px); transition: background 0.3s ease; }
         .fact:hover { background: rgba(22, 36, 68, 0.8); }
@@ -234,26 +232,26 @@
         .service-icon { width: 50px; height: 50px; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 20px; margin-bottom: 25px; background: rgba(138, 226, 255, 0.05); }
         .service-card h3 { font-size: 22px; margin-bottom: 12px; text-align: left; }
         .service-card p { color: var(--gray); font-size: 13px; margin-bottom: 20px; }
-        .service-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+        .service-tags { display: flex; gap: 6px; }
         .service-tags span { padding: 5px 9px; border: 1px solid var(--border); border-radius: 20px; color: var(--gray); font-family: "DM Mono", monospace; font-size: 8px; background: rgba(6, 11, 25, 0.8); }
 
         /* SKILLS */
-        .skill-group { padding: 25px 0; display: grid; grid-template-columns: 30% 1fr; border-bottom: 1px solid var(--border); align-items: center; }
+        .skill-group { padding: 25px 0; display: grid; grid-template-columns: 35% 1fr; border-bottom: 1px solid var(--border); }
         .skill-title h3 { font-size: 13px; letter-spacing: 1px; text-align: left; }
         .skill-items { display: flex; flex-wrap: wrap; gap: 8px; }
         .skill-items span { padding: 8px 14px; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; color: var(--white); font-size: 11px; transition: 0.3s; }
         .skill-items span:hover { border-color: var(--blue); box-shadow: 0 0 10px rgba(138, 226, 255, 0.2); }
 
         /* PROJECTS */
-        .project.featured { display: grid; grid-template-columns: 1.2fr 0.8fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+        .project.featured { display: grid; grid-template-columns: 1.3fr 0.9fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
         .project-visual { padding: 35px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, rgba(27, 47, 86, 0.5), rgba(14, 23, 46, 0.8) 70%); }
-        .phone-stack { position: relative; width: 170px; }
+        .phone-stack { position: relative; width: 190px; }
         .phone-frame { border-radius: 22px; overflow: hidden; border: 4px solid #1a2c4e; box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
-        .phone-frame.secondary { position: absolute; top: -25px; left: -50px; width: 135px; transform: rotate(-11deg); opacity: 0.55; }
+        .phone-frame.secondary { position: absolute; top: -30px; left: -65px; width: 155px; transform: rotate(-11deg); opacity: 0.55; }
         .phone-frame.primary { position: relative; z-index: 2; transform: rotate(4deg); }
         .project-info { padding: 35px 30px; display: flex; flex-direction: column; justify-content: center; }
-        .project-meta { display: flex; justify-content: flex-start; color: var(--blue); font-family: "DM Mono", monospace; font-size: 9px; margin-bottom: 15px; }
-        .project-info h3 { font-size: clamp(28px, 3.5vw, 45px); line-height: 1.05; letter-spacing: -1px; margin-bottom: 18px; text-align: left; }
+        .project-meta { display: flex; justify-content: flex-start; color: var(--blue); font-family: "DM Mono", monospace; font-size: 9px; margin-bottom: 20px; }
+        .project-info h3 { font-size: clamp(32px, 3.5vw, 45px); line-height: 1; letter-spacing: -2px; margin-bottom: 18px; text-align: left; }
         .project-info p { color: var(--gray); font-size: 12px; margin-bottom: 20px; }
         .project-result { display: flex; gap: 25px; margin-bottom: 20px; }
         .project-result strong { color: var(--blue); font-size: 22px; display: block; text-align: left; }
@@ -275,12 +273,12 @@
 
         /* EXPERIENCE & GALLERY */
         .experience { background: transparent; backdrop-filter: none; }
-        .experience-item { display: grid; grid-template-columns: 180px 1fr; gap: 30px; padding: 30px 0; border-top: 1px solid var(--border); }
+        .experience-item { display: grid; grid-template-columns: 200px 1fr; gap: 40px; padding: 30px 0; border-top: 1px solid var(--border); }
         .experience-year { color: var(--gray); font-family: "DM Mono", monospace; font-size: 10px; text-align: left; }
         .experience-content span { color: var(--blue); font-family: "DM Mono", monospace; font-size: 9px; display: block; text-align: left; }
-        .experience-content h3 { font-size: 24px; margin: 8px 0 15px; text-align: left; }
+        .experience-content h3 { font-size: 26px; margin: 8px 0 15px; text-align: left; }
         .experience-content p { color: var(--gray); font-size: 13px; }
-        .experience-tags { display: flex; gap: 7px; margin-top: 20px; flex-wrap: wrap; }
+        .experience-tags { display: flex; gap: 7px; margin-top: 20px; }
         .experience-tags span { padding: 6px 10px; border: 1px solid var(--border); border-radius: 20px; color: var(--gray); font-size: 9px; background: rgba(6, 11, 25, 0.5); }
 
         .activity-gallery { margin-top: 45px; }
@@ -290,8 +288,8 @@
 
         /* ACHIEVEMENTS & CERTIFICATES */
         .achievement-card { display: grid; grid-template-columns: 0.7fr 1.3fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
-        .achievement-left { padding: 35px; background: linear-gradient(145deg, rgba(27, 46, 84, 0.6), rgba(14, 23, 46, 0.8)); display: flex; flex-direction: column; justify-content: center; }
-        .achievement-left h3 { font-size: clamp(36px, 4vw, 50px); line-height: 0.9; margin-top: 20px; color: var(--blue); text-shadow: 0 0 15px rgba(138, 226, 255, 0.3); text-align: left; }
+        .achievement-left { padding: 35px; background: linear-gradient(145deg, rgba(27, 46, 84, 0.6), rgba(14, 23, 46, 0.8)); }
+        .achievement-left h3 { font-size: 50px; line-height: 0.85; margin-top: 50px; color: var(--blue); text-shadow: 0 0 15px rgba(138, 226, 255, 0.3); text-align: left; }
         .achievement-right { padding: 35px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
         .achievement-text p { color: var(--gray); font-size: 13px; margin-bottom: 15px; }
         .achievement-link { color: var(--blue); font-family: "DM Mono", monospace; font-size: 10px; border-bottom: 1px solid var(--blue); display: inline-block; }
@@ -311,572 +309,571 @@
         /* CONTACT & FOOTER */
         .contact { padding: 90px 8%; text-align: center; background: transparent; }
         .contact p { color: var(--blue); font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: 3px; margin-bottom: 20px; text-align: center; }
-        .contact h2 { font-size: clamp(30px, 4.5vw, 65px); line-height: 1.1; margin-bottom: 35px; text-align: center; }
+        .contact h2 { font-size: clamp(35px, 5vw, 65px); line-height: 1; margin-bottom: 35px; text-align: center; white-space: nowrap; }
         .contact h2 span { color: var(--blue); text-shadow: 0 0 20px rgba(138, 226, 255, 0.4); }
         .contact a.get-in-touch { display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, var(--blue), #5c9eff); color: var(--background); border-radius: 30px; font-size: 12px; font-weight: 700; box-shadow: 0 0 25px rgba(138, 226, 255, 0.4); transition: 0.3s; }
         .contact a.get-in-touch:hover { transform: translateY(-3px); box-shadow: 0 0 35px rgba(138, 226, 255, 0.7); }
-
-        .contact-details { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 30px; color: var(--gray); font-family: "DM Mono", monospace; font-size: 11px; }
+        
+        /* CONTACT DETAILS WITH ICONS */
+        .contact-details { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; margin-top: 30px; color: var(--gray); font-family: "DM Mono", monospace; font-size: 11px; }
         .contact-item { display: inline-flex; align-items: center; gap: 8px; color: var(--white); transition: color 0.3s; }
         .contact-item:hover { color: var(--blue); }
         .contact-icon { width: 16px; height: 16px; fill: currentColor; }
 
-        footer { padding: 20px 7%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 9px; background: rgba(6, 11, 25, 0.9); }
+        footer { padding: 20px 7%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 9px; background: rgba(6, 11, 25, 0.9); }
 
-        /* =========================================
-           MEDIA QUERIES (RESPONSIVE BREAKPOINTS)
-        ========================================= */
-
-        /* 1. TABLET & LAPTOP KECIL (Max-width: 1024px) */
-        @media (max-width: 1024px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding-top: 110px;
-                gap: 40px;
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            .service-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .project.featured {
-                grid-template-columns: 1fr;
-            }
-            .achievement-card {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* 2. TABLET PORTRAIT & HP BESAR (Max-width: 768px) */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 0 5%;
-                height: 70px;
-            }
-            .navbar nav {
-                display: none;
-            }
-            .section {
-                padding: 50px 5%;
-            }
-            .hero {
-                padding: 100px 5% 40px;
-            }
-            .hero-buttons {
-                width: 100%;
-            }
-            .button-primary, .button-secondary {
-                width: 100%;
-                text-align: center;
-            }
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-            .skill-group {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            .skill-title h3 {
-                margin-bottom: 5px;
-            }
-            .project-row {
-                grid-template-columns: 1fr;
-            }
-            .achievement-right {
-                grid-template-columns: 1fr;
-            }
-            .certificate-grid {
-                grid-template-columns: 1fr;
-            }
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                height: auto;
-            }
-            .gallery-item {
-                height: 200px;
-            }
-            .experience-item {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-            .system-body {
-                grid-template-columns: 1fr;
-            }
-            footer {
-                flex-direction: column;
-                text-align: center;
-                gap: 6px;
-            }
-        }
-
-        /* 3. HP KECIL (Max-width: 480px) */
-        @media (max-width: 480px) {
-            .about-facts {
-                grid-template-columns: 1fr;
-            }
-            .contact-details {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-            .project-result {
-                flex-direction: row;
-                gap: 15px;
-            }
-            .phone-stack {
-                width: 130px;
-            }
-            .phone-frame.secondary {
-                width: 100px;
-                left: -35px;
-            }
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .navbar nav { display: none; }
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero h1, .hero h2 { text-align: center; }
+            .hero-buttons { justify-content: center; }
+            .about-grid, .service-grid, .project.featured, .project-row, .achievement-card, .certificate-grid { grid-template-columns: 1fr; }
+            .achievement-right { grid-template-columns: 1fr; }
+            .experience-item { grid-template-columns: 1fr; gap: 10px; }
+            .section-heading h2, .contact h2 { white-space: normal; }
         }
     </style>
 </head>
+
 <body>
 
     <canvas id="galaxy-canvas"></canvas>
 
-    <!-- HEADER / NAVBAR -->
+    <!-- NAVBAR -->
     <header class="navbar">
-        <a href="#" class="logo">Eko <span>A.</span></a>
+        <a href="#home" class="logo">syaira<span>.</span></a>
         <nav>
-            <a href="#about">// TENTANG</a>
-            <a href="#services">// LAYANAN</a>
-            <a href="#skills">// KEAHLIAN</a>
-            <a href="#projects">// PROYEK</a>
-            <a href="#experience">// PENGALAMAN</a>
-            <a href="#achievements">// PRESTASI</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#certificates">Certificates</a>
         </nav>
-        <a href="#contact" class="nav-contact">HUBUNGI SAYA</a>
+        <a href="#contact" class="nav-contact">Let's Talk ↗</a>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="status">
-                <span></span> Menerima Proyek Baru
-            </div>
-            <p class="hero-label">// UI/UX DESIGNER & FRONTEND DEVELOPER</p>
-            <h1>Eko<br><span id="typed-text"></span><span class="typing-cursor"></span></h1>
-            <h2>Spesialis Antarmuka Digital & <span>Pengalaman Pengguna.</span></h2>
-            <p class="hero-description">
-                Saya merancang dan membangun produk digital yang intuitif, estetis, dan berkinerja tinggi untuk membantu bisnis berkembang di era digital.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="button-primary">Lihat Portfolio</a>
-                <a href="#contact" class="button-secondary">Diskusi Proyek</a>
-            </div>
-        </div>
-
-        <div class="hero-card">
-            <div class="system-card">
-                <div class="card-top">
-                    <div class="window-buttons"><i></i><i></i><i></i></div>
-                    <span class="mono">system_profile.v2</span>
+    <main>
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-left">
+                <div class="status"><span></span> AVAILABLE FOR INTERNSHIP</div>
+                <p class="hero-label">IT & AI SUPPORT</p>
+                <h1>Hi, I'm <br><span>Syaira.</span></h1>
+                <h2>Bridging complex systems, data insights, <span>& digital experience.</span></h2>
+                <p class="hero-description">Hello, I'm Syaira! An Information Systems undergraduate passionate about designing seamless digital workflows, optimizing database architectures, and turning raw data into strategic insights. Dedicated to bridging technology and human needs to deliver high-impact digital solutions.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="button-primary">Explore My Work <span>↗</span></a>
+                    <a href="#contact" class="button-secondary">Contact Me</a>
                 </div>
-                <div class="system-body">
-                    <div class="photo-frame">
-                        <img src="assets/foto-profil.jpg" alt="Eko Anggoro">
+            </div>
+
+            <div class="hero-right">
+                <div class="system-card">
+                    <div class="card-top">
+                        <span>SYAIRA.OS</span>
+                        <div class="window-buttons"><i></i><i></i><i></i></div>
                     </div>
-                    <div class="system-info">
-                        <p class="mono green">● SYSTEM_ONLINE</p>
-                        <h3>Eko Anggoro</h3>
-                        <p>UI/UX & Web Developer</p>
-                        <div class="divider"></div>
-                        <div class="focus-list">
-                            <div><span>FOKUS:</span> <b>UI/UX & Web</b></div>
-                            <div><span>LOKASI:</span> <b>Indonesia</b></div>
-                            <div><span>STATUS:</span> <b>Freelance / Open</b></div>
+                    <div class="system-body">
+                        <div class="photo-frame">
+                            <img src="profile.jpg" alt="Syaira Rahmadiana">
+                        </div>
+                        <div class="system-info">
+                            <p class="mono green">SYSTEM.USER</p>
+                            <h3>Syaira Rahmadiana</h3>
+                            <p>Information Systems</p>
+                            <div class="divider"></div>
+                            <p class="mono green">CURRENT_FOCUS</p>
+                            <div class="focus-list">
+                                <div><span>IT SUPPORT</span><b>82%</b></div>
+                                <div><span>DATA ANALYTICS</span><b>75%</b></div>
+                                <div><span>WEB DEV</span><b>78%</b></div>
+                                <div><span>UI/UX DESIGN</span><b>88%</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <span>STATUS</span><strong>INTERNSHIP READY</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about">
+            <div class="section-heading">
+                <p>ABOUT ME</p>
+                <h2>More than just technology.</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-main">
+                    <p class="big-text">Transforming complex system requirements into intuitive, data-driven digital experiences.</p>
+                    <p>I am a 7th-semester Information Systems student at Universitas Gunadarma with a strong foundation in database management, data analytics, and user experience design. My journey in tech is driven by curiosity about how systems function under the hood and how they can be refined to better serve end-users. With hands-on experience as a Laboratory Assistant, I thrive in environments where analytical thinking, technical problem-solving, and clear communication intersect to create meaningful technology solutions.</p>
+                </div>
+                <div class="about-facts">
+                    <div class="fact"><span>EDUCATION</span><strong>Information Systems</strong><small>Universitas Gunadarma</small></div>
+                    <div class="fact"><span>SEMESTER</span><strong>07</strong><small>Undergraduate Student</small></div>
+                    <div class="fact"><span>GPA</span><strong>3.69</strong><small>Current GPA</small></div>
+                    <div class="fact"><span>INTEREST</span><strong>IT · UI/UX · Data</strong><small>Digital Solutions</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="what-i-do">
+            <div class="section">
+                <div class="section-heading">
+                    <p>WHAT I DO</p>
+                    <h2>Where technology meets people.</h2>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-icon">◇</div>
+                        <h3>Design</h3>
+                        <p>Crafting human-centered interfaces, structured user flows, and wireframes based on usability principles. Focused on simplifying user journeys and ensuring digital interactions are intuitive, accessible, and visually engaging.</p>
+                        <div class="service-tags"><span>Figma</span><span>UI/UX</span><span>UCD</span></div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⌘</div>
+                        <h3>Analyze</h3>
+                        <p>Deconstructing complex business processes into structured system models using UML, ERD, and SQL databases. Focused on identifying system bottlenecks, defining core technical requirements, and ensuring database integrity.</p>
+                        <div class="service-tags"><span>UML</span><span>SQL</span><span>Analysis</span></div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⟨/⟩</div>
+                        <h3>Build</h3>
+                        <p>Translating wireframes and system architecture into responsive web applications and data visualization dashboards. Utilizing modern web tools and Power BI to present actionable business metrics clearly.</p>
+                        <div class="service-tags"><span>HTML</span><span>PHP</span><span>Python</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section skills">
+            <div class="section-heading">
+                <p>SKILLS & TOOLS</p>
+                <h2>My digital toolkit.</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <div class="skill-title"><h3>UI / UX DESIGN</h3></div>
+                    <div class="skill-items"><span>Figma</span><span>Wireframing</span><span>Prototyping</span><span>User Flow</span></div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-title"><h3>DATA</h3></div>
+                    <div class="skill-items"><span>Power BI</span><span>MySQL</span><span>Oracle</span><span>Python</span></div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-title"><h3>DEVELOPMENT</h3></div>
+                    <div class="skill-items"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section projects">
+            <div class="section-heading">
+                <p>SELECTED PROJECTS</p>
+                <h2>Things I've worked on.</h2>
+            </div>
+
+            <!-- PROJECT 1 -->
+            <article class="project featured">
+                <div class="project-visual">
+                    <div class="phone-stack">
+                        <div class="phone-frame secondary">
+                            <img src="puncakhill-4.jpg" alt="Puncak Hill Resto">
+                        </div>
+                        <div class="phone-frame primary">
+                            <img src="puncakhill-1.jpg" alt="Puncak Hill Resto UI">
                         </div>
                     </div>
                 </div>
-                <div class="card-bottom">
-                    <span>LATEST_BUILD: <strong>v2.026</strong></span>
-                    <span>STATUS: <strong>READY</strong></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="section reveal" id="about">
-        <div class="section-heading">
-            <p>// TENTANG SAYA</p>
-            <h2>Menggabungkan Desain & Kinerja Kode.</h2>
-        </div>
-        <div class="about-grid">
-            <div class="about-main">
-                <p class="big-text">
-                    Berfokus pada pembuatan solusi digital responsif, fungsional, dan memberikan pengalaman pengguna yang berkesan.
-                </p>
-                <p>
-                    Sebagai pengembang dan perancang UI/UX, saya menjembatani celah antara estetika visual dan struktur teknis. Setiap elemen antarmuka yang saya buat dipikirkan dengan matang untuk memenuhi kebutuhan pengguna sekaligus tujuan bisnis.
-                </p>
-            </div>
-            <div class="about-facts">
-                <div class="fact">
-                    <span>PENGALAMAN</span>
-                    <strong>3+ Tahun</strong>
-                    <small>Di Industri Digital</small>
-                </div>
-                <div class="fact">
-                    <span>PROYEK</span>
-                    <strong>15+ Selesai</strong>
-                    <small>Website & Aplikasi</small>
-                </div>
-                <div class="fact">
-                    <span>KEPUASAN</span>
-                    <strong>100%</strong>
-                    <small>Klien Terlayani</small>
-                </div>
-                <div class="fact">
-                    <span>KODE</span>
-                    <strong>Clean & Scalable</strong>
-                    <small>Standar Modern</small>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section class="section what-i-do reveal" id="services">
-        <div class="section-heading">
-            <p>// LAYANAN</p>
-            <h2>Apa Yang Bisa Saya Bantu.</h2>
-        </div>
-        <div class="service-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                <h3>UI/UX Design</h3>
-                <p>Mendesain prototipe interaktif, wireframe, dan antarmuka aplikasi yang modern serta ramah pengguna.</p>
-                <div class="service-tags">
-                    <span>Figma</span>
-                    <span>Wireframing</span>
-                    <span>Prototyping</span>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-                <h3>Web Development</h3>
-                <p>Membangun website yang cepat, responsif di semua perangkat, dan dioptimalkan untuk SEO.</p>
-                <div class="service-tags">
-                    <span>HTML/CSS</span>
-                    <span>JavaScript</span>
-                    <span>Responsive</span>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
-                <h3>Mobile App Design</h3>
-                <p>Merancang alur pengguna dan desain antarmuka aplikasi iOS & Android yang fungsional.</p>
-                <div class="service-tags">
-                    <span>Mobile First</span>
-                    <span>Design System</span>
-                    <span>User Testing</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section class="section reveal" id="skills">
-        <div class="section-heading">
-            <p>// KEAHLIAN</p>
-            <h2>Teknologi & Tools.</h2>
-        </div>
-        <div class="skills-container">
-            <div class="skill-group">
-                <div class="skill-title"><h3>DESAIN & PROTO TYPING</h3></div>
-                <div class="skill-items">
-                    <span>Figma</span>
-                    <span>Adobe XD</span>
-                    <span>Wireframing</span>
-                    <span>Design Systems</span>
-                    <span>User Research</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-title"><h3>FRONTEND DEVELOPMENT</h3></div>
-                <div class="skill-items">
-                    <span>HTML5</span>
-                    <span>CSS3 / SCSS</span>
-                    <span>JavaScript (ES6+)</span>
-                    <span>Tailwind CSS</span>
-                    <span>Git / GitHub</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section class="section reveal" id="projects">
-        <div class="section-heading">
-            <p>// PROYEK UNGGULAN</p>
-            <h2>Karya Terbaru.</h2>
-        </div>
-        
-        <!-- Featured Project -->
-        <div class="project featured">
-            <div class="project-visual">
-                <div class="phone-stack">
-                    <div class="phone-frame secondary">
-                        <img src="assets/project1-preview2.jpg" alt="Preview 2">
+                <div class="project-info">
+                    <div class="project-meta"><span>UI/UX · UCD · FIGMA</span></div>
+                    <h3>Puncak Hill Resto</h3>
+                    <p>Puncak Hill Resto is a User-Centered Design (UCD) initiative developed to streamline and modernize the food ordering experience for local dining establishments. The project focused on reducing customer order latency and removing friction during menu selection. Through iterative prototyping, visual hierarchy redesign, and rigorous usability testing in Figma, the solution achieved a System Usability Scale (SUS) score of 82.6 (Grade B), confirming its effectiveness and ease of use.</p>
+                    <div class="project-result">
+                        <div><strong>82.6</strong><span>SUS SCORE</span></div>
+                        <div><strong>B</strong><span>GRADE</span></div>
                     </div>
-                    <div class="phone-frame primary">
-                        <img src="assets/project1-preview1.jpg" alt="Preview 1">
+                    <a href="https://tinyurl.com/Prototype-PuncakHillResto" target="_blank" class="project-button">View Prototype ↗</a>
+                </div>
+            </article>
+
+            <!-- PROJECT 2 & 3 -->
+            <div class="project-row">
+                <article class="small-project">
+                    <div class="project-image">
+                        <img src="hermonia-1.jpg" alt="Hermonia Web">
+                        <span>WEB</span>
+                    </div>
+                    <div class="small-project-info">
+                        <span>WEB DEVELOPMENT</span>
+                        <h3>HERMONIA</h3>
+                        <p>HERMONIA is a modern, responsive e-commerce web platform designed to deliver a smooth online shopping experience. Built from the ground up using HTML, CSS, and JavaScript, the application focuses on clean code structure, intuitive product catalog navigation, dynamic layout adaptation across desktop and mobile views, and seamless user interaction components.</p>
+                        <div class="project-tools">HTML · CSS · JavaScript</div>
+                    </div>
+                </article>
+
+                <article class="small-project">
+                    <div class="project-image">
+                        <img src="powerbi-dashboard.jpg" alt="Power BI Dashboard">
+                        <span>DATA</span>
+                    </div>
+                    <div class="small-project-info">
+                        <span>DATA VISUALIZATION</span>
+                        <h3>Branch Sales Dashboard</h3>
+                        <p>The Branch Sales Dashboard is an interactive business intelligence tool developed in Power BI to monitor multi-branch performance metrics. Designed for business decision-makers, the dashboard aggregates sales transaction data to visualize revenue per branch, top-performing product categories, and monthly target achievements—enabling stakeholders to identify growth opportunities quickly.</p>
+                        <div class="project-tools">Power BI · Data Analysis</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section experience">
+            <div class="section-heading">
+                <p>EXPERIENCE</p>
+                <h2>Learning by doing.</h2>
+            </div>
+            <div class="experience-item">
+                <div class="experience-year">SEP 2025 — PRESENT</div>
+                <div class="experience-content">
+                    <span>UNIVERSITAS GUNADARMA</span>
+                    <h3>Information Systems Laboratory Assistant</h3>
+                    <p>Serving as an Information Systems Laboratory Assistant at Universitas Gunadarma, responsible for mentoring and guiding over 30 undergraduate students through practical technical coursework. Facilitated hands-on laboratory modules covering Database Systems, Data Science, and System Analysis using industry tools such as Oracle MySQL, Python (Jupyter), Power BI, and StarUML. Collaborated closely with faculty staff to ensure curriculum alignment, evaluate technical assignments, and help students troubleshoot complex database queries and analytical scripts.</p>
+                    <div class="experience-tags">
+                        <span>Oracle</span><span>MySQL</span><span>Python</span><span>Power BI</span>
                     </div>
                 </div>
             </div>
-            <div class="project-info">
-                <div class="project-meta"><span>Aplikasi E-Commerce</span></div>
-                <h3>Mobile Shopping Experience</h3>
-                <p>Redesain total antarmuka belanja mobile untuk meningkatkan angka konversi pengguna dan mempermudah alur checkout.</p>
-                <div class="project-result">
-                    <div>
-                        <strong>+45%</strong>
-                        <span>CONVERSION RATE</span>
+
+            <!-- GALLERY (TANPA TEKS OVERLAY LAB) -->
+            <div class="activity-gallery">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="lab-1.jpg" alt="Lab Activity 1">
                     </div>
-                    <div>
-                        <strong>4.8</strong>
-                        <span>USER RATING</span>
+                    <div class="gallery-item">
+                        <img src="lab-2.jpg" alt="Lab Activity 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="lab-3.jpg" alt="Lab Activity 3">
                     </div>
                 </div>
-                <a href="#" class="project-button">Lihat Detail Proyek</a>
             </div>
-        </div>
+        </section>
 
-        <!-- Secondary Projects -->
-        <div class="project-row">
-            <div class="small-project">
-                <div class="project-image">
-                    <img src="assets/project2.jpg" alt="Project Web Dashboard">
-                    <span>WEB APP</span>
+        <!-- ACHIEVEMENTS -->
+        <section class="section achievement">
+            <div class="section-heading">
+                <p>ACHIEVEMENT</p>
+                <h2>A few milestones.</h2>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-left">
+                    <span>WISPO · 2021</span>
+                    <h3>Bronze Award</h3>
                 </div>
-                <div class="small-project-info">
-                    <span>Analytics Dashboard</span>
-                    <h3>SaaS Monitoring System</h3>
-                    <p>Dashboard manajemen data terintegrasi untuk pemantauan performa bisnis secara real-time.</p>
-                    <p class="project-tools">TOOLS: Figma, Tailwind CSS, JS</p>
+                <div class="achievement-right">
+                    <div class="achievement-text">
+                        <p>Awarded the Bronze Medal at the World Innovative Science Project Olympiad (WISPO) 2021 in the Engineering and Technology category, competing against 117 international teams from 23 countries. Co-developed the "Digital Pocketbook on Flood Disaster Mitigation in Jakarta," an interactive digital research project aimed at educating communities on disaster preparedness. Responsible for technical research, digital media development, and presenting the project in English to an international panel of judges.</p>
+                        <a href="https://online.fliphtml5.com/azopm/mplj/" target="_blank" class="achievement-link">Read the Pocketbook ↗</a>
+                    </div>
+                    <div class="achievement-image">
+                        <img src="wispo.jpg" alt="WISPO Award">
+                    </div>
                 </div>
             </div>
-            <div class="small-project">
-                <div class="project-image">
-                    <img src="assets/project3.jpg" alt="Project Landing Page">
-                    <span>LANDING PAGE</span>
-                </div>
-                <div class="small-project-info">
-                    <span>Company Profile</span>
-                    <h3>Modern Tech Landing Page</h3>
-                    <p>Website landing page interaktif dengan animasi halus untuk perusahaan startup teknologi.</p>
-                    <p class="project-tools">TOOLS: HTML, CSS Grid, Canvas API</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section class="section experience reveal" id="experience">
-        <div class="section-heading">
-            <p>// PENGALAMAN</p>
-            <h2>Jejak Karir.</h2>
-        </div>
-        
-        <div class="experience-item">
-            <div class="experience-year">2024 - SEKARANG</div>
-            <div class="experience-content">
-                <span>FREELANCE</span>
-                <h3>UI/UX & Frontend Developer</h3>
-                <p>Bekerja sama dengan berbagai klien lokal dan internasional dalam membangun website responsif dan merancang antarmuka produk digital.</p>
-                <div class="experience-tags">
-                    <span>UI/UX</span>
-                    <span>Web Development</span>
-                    <span>Client Management</span>
+        <!-- CERTIFICATES -->
+        <section id="certificates" class="section certificates">
+            <div class="section-heading">
+                <p>CERTIFICATES</p>
+                <h2>Proof of the work.</h2>
+            </div>
+            <div class="certificate-grid">
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="wispo.jpg" alt="WISPO Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <span>WISPO · 2021</span>
+                        <h3>Bronze Award</h3>
+                        <p>World Innovative Science Project Olympiad</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="cert-excel.jpg" alt="Excel Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <span>SKILL ACADEMY · 2025</span>
+                        <h3>Ahli Mengolah Data dengan Excel</h3>
+                        <p>Skill Academy by Ruangguru — Score 86</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="experience-item">
-            <div class="experience-year">2023 - 2024</div>
-            <div class="experience-content">
-                <span>AGENCY</span>
-                <h3>Junior UI/UX Designer</h3>
-                <p>Bertanggung jawab membuat wireframe, prototipe, serta melakukan riset pengguna untuk proyek aplikasi klien perusahaan.</p>
-                <div class="experience-tags">
-                    <span>Figma</span>
-                    <span>Prototyping</span>
-                    <span>User Research</span>
+        <!-- CONTACT METODE DENGAN IKON -->
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <p>HAVE AN OPPORTUNITY?</p>
+                <h2>Let's build something <span>meaningful.</span></h2>
+                <a href="mailto:syairau14@gmail.com" class="get-in-touch">Get In Touch ↗</a>
+                
+                <div class="contact-details">
+                    <!-- EMAIL ICON -->
+                    <a href="mailto:syairau14@gmail.com" class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span>syairau14@gmail.com</span>
+                    </a>
+                    
+                    <!-- PHONE ICON -->
+                    <a href="tel:+6281219041337" class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <span>+62 812-1904-1337</span>
+                    </a>
+
+                    <!-- INSTAGRAM ICON -->
+                    <a href="https://instagram.com" target="_blank" class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <span>@syairar</span>
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <!-- Activity Gallery -->
-        <div class="activity-gallery">
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="assets/activity1.jpg" alt="Aktivitas 1"></div>
-                <div class="gallery-item"><img src="assets/activity2.jpg" alt="Aktivitas 2"></div>
-                <div class="gallery-item"><img src="assets/activity3.jpg" alt="Aktivitas 3"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ACHIEVEMENTS & CERTIFICATES -->
-    <section class="section reveal" id="achievements">
-        <div class="section-heading">
-            <p>// PRESTASI & SERTIFIKAT</p>
-            <h2>Pencapaian Lengkap.</h2>
-        </div>
-
-        <div class="achievement-card">
-            <div class="achievement-left">
-                <p class="mono green">// JUARA 1</p>
-                <h3>UI/UX Design Competition 2025</h3>
-            </div>
-            <div class="achievement-right">
-                <div class="achievement-text">
-                    <p>Memenangkan kompetisi desain antarmuka tingkat nasional dengan inovasi aplikasi pemilah sampah otomatis berbasis AI.</p>
-                    <a href="#" class="achievement-link">VERIFIKASI SERTIFIKAT →</a>
-                </div>
-                <div class="achievement-image">
-                    <img src="assets/achievement.jpg" alt="Foto Penghargaan">
-                </div>
-            </div>
-        </div>
-
-        <div class="certificate-grid" style="margin-top: 20px;">
-            <div class="certificate-card">
-                <div class="certificate-image">
-                    <img src="assets/cert1.jpg" alt="Sertifikat Google UI/UX">
-                </div>
-                <div class="certificate-info">
-                    <span>GOOGLE CERTIFIED</span>
-                    <h3>Google UX Design Specialization</h3>
-                    <p>Sertifikasi profesional tingkat lanjut meliputi riset pengguna, wireframing, dan prototipe.</p>
-                </div>
-            </div>
-            <div class="certificate-card">
-                <div class="certificate-image">
-                    <img src="assets/cert2.jpg" alt="Sertifikat Frontend">
-                </div>
-                <div class="certificate-info">
-                    <span>DICODING INDONESIA</span>
-                    <h3>Belajar Pengembang Web Modern</h3>
-                    <p>Sertifikasi kelulusan pemrograman web frontend dengan standar industri modern.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="contact reveal" id="contact">
-        <p>// APAKAH ANDA SIAP?</p>
-        <h2>Mari Buat Proyek <span>Luar Biasa</span> Bersama.</h2>
-        <a href="mailto:emailkamu@domain.com" class="get-in-touch">Mulai Diskusi Sekarang</a>
-
-        <div class="contact-details">
-            <a href="mailto:emailkamu@domain.com" class="contact-item">
-                <i class="fa-solid fa-envelope contact-icon"></i> eko@domain.com
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="contact-item">
-                <i class="fa-brands fa-linkedin contact-icon"></i> LinkedIn
-            </a>
-            <a href="https://github.com" target="_blank" class="contact-item">
-                <i class="fa-brands fa-github contact-icon"></i> GitHub
-            </a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
-        <div>© 2026 Eko Anggoro. Hak Cipta Dilindungi.</div>
-        <div>Dibuat dengan HTML, CSS & JS Interaktif</div>
+        <div>© 2026 Syaira Rahmadiana</div>
+        <div>INFORMATION SYSTEMS</div>
+        <div>UNIVERSITAS GUNADARMA</div>
     </footer>
 
-    <!-- JAVASCRIPT ANIMASI & TYPING EFFECT -->
+    <!-- JAVASCRIPT -->
     <script>
-        // Galaxy Canvas Background Effect
-        const canvas = document.getElementById('galaxy-canvas');
-        const ctx = canvas.getContext('2d');
+        /* =========================================
+           GALAXY BACKGROUND + CURSOR SPARKLE TRAIL
+        ========================================= */
+        const canvas = document.getElementById("galaxy-canvas");
+        const ctx = canvas.getContext("2d");
+
+        let width, height;
+        let stars = [];
+        let sparkles = [];
 
         function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        const stars = [];
-        for (let i = 0; i < 120; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 1.5,
-                alpha: Math.random(),
-                speed: Math.random() * 0.005 + 0.002
-            });
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initStars();
         }
 
-        function drawStars() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            stars.forEach(star => {
-                star.alpha += star.speed;
-                if (star.alpha > 1 || star.alpha < 0) star.speed = -star.speed;
+        class Star {
+            constructor() {
+                this.reset();
+            }
 
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 2 + 0.3;
+                this.maxAlpha = Math.random() * 0.8 + 0.2;
+                this.alpha = 0;
+                this.speedAlpha = Math.random() * 0.01 + 0.005;
+                this.dir = 1;
+                
+                const colors = ['#8ae2ff', '#c2e9ff', '#ffffff', '#7a5cff', '#5c9eff'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.speedY = Math.random() * 0.2 + 0.05;
+            }
+
+            update() {
+                this.alpha += this.speedAlpha * this.dir;
+                if (this.alpha >= this.maxAlpha) {
+                    this.dir = -1;
+                } else if (this.alpha <= 0) {
+                    this.reset();
+                }
+
+                this.y -= this.speedY;
+                if (this.y < 0) this.y = height;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
                 ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(138, 226, 255, ${Math.abs(star.alpha)})`;
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
+
+                if (this.size > 1.5) {
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = this.color;
+                }
+                ctx.restore();
+            }
+        }
+
+        class CursorSparkle {
+            constructor(x, y) {
+                this.x = x + (Math.random() * 20 - 10);
+                this.y = y + (Math.random() * 20 - 10);
+                this.size = Math.random() * 3 + 1;
+                this.alpha = 1;
+                this.decay = Math.random() * 0.03 + 0.015;
+                this.vx = (Math.random() - 0.5) * 1.5;
+                this.vy = (Math.random() - 0.5) * 1.5 - 0.5;
+                const colors = ['#8ae2ff', '#ffffff', '#c2e9ff', '#b388ff'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.isDiamond = Math.random() > 0.5;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.alpha -= this.decay;
+            }
+
+            draw() {
+                if (this.alpha <= 0) return;
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = this.color;
+
+                if (this.isDiamond) {
+                    ctx.beginPath();
+                    ctx.moveTo(this.x, this.y - this.size * 1.5);
+                    ctx.lineTo(this.x + this.size, this.y);
+                    ctx.lineTo(this.x, this.y + this.size * 1.5);
+                    ctx.lineTo(this.x - this.size, this.y);
+                    ctx.closePath();
+                    ctx.fill();
+                } else {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.restore();
+            }
+        }
+
+        function initStars() {
+            stars = [];
+            const count = Math.floor((width * height) / 3000);
+            for (let i = 0; i < count; i++) {
+                stars.push(new Star());
+            }
+        }
+
+        window.addEventListener('mousemove', (e) => {
+            for (let i = 0; i < 2; i++) {
+                sparkles.push(new CursorSparkle(e.clientX, e.clientY));
+            }
+        });
+
+        function animateGalaxy() {
+            ctx.clearRect(0, 0, width, height);
+
+            const time = Date.now() * 0.0005;
+            const grad1 = ctx.createRadialGradient(
+                width * 0.2 + Math.sin(time) * 50, height * 0.3 + Math.cos(time) * 50, 50,
+                width * 0.2, height * 0.3, 400
+            );
+            grad1.addColorStop(0, 'rgba(122, 92, 255, 0.08)');
+            grad1.addColorStop(1, 'transparent');
+            ctx.fillStyle = grad1;
+            ctx.fillRect(0, 0, width, height);
+
+            const grad2 = ctx.createRadialGradient(
+                width * 0.8 + Math.cos(time) * 40, height * 0.7 + Math.sin(time) * 40, 50,
+                width * 0.8, height * 0.7, 500
+            );
+            grad2.addColorStop(0, 'rgba(138, 226, 255, 0.08)');
+            grad2.addColorStop(1, 'transparent');
+            ctx.fillStyle = grad2;
+            ctx.fillRect(0, 0, width, height);
+
+            stars.forEach(star => {
+                star.update();
+                star.draw();
             });
-            requestAnimationFrame(drawStars);
-        }
-        drawStars();
 
-        // Typing Effect
-        const words = ["Anggoro.", "Designer.", "Developer."];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typedTextSpan = document.getElementById("typed-text");
-
-        function type() {
-            const currentWord = words[wordIndex];
-            if (isDeleting) {
-                typedTextSpan.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typedTextSpan.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
+            for (let i = sparkles.length - 1; i >= 0; i--) {
+                sparkles[i].update();
+                sparkles[i].draw();
+                if (sparkles[i].alpha <= 0) {
+                    sparkles.splice(i, 1);
+                }
             }
 
-            let typeSpeed = isDeleting ? 60 : 120;
-
-            if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                typeSpeed = 500;
-            }
-
-            setTimeout(type, typeSpeed);
+            requestAnimationFrame(animateGalaxy);
         }
-        document.addEventListener("DOMContentLoaded", type);
 
-        // Scroll Reveal Animation
-        const reveals = document.querySelectorAll(".reveal");
-        function revealOnScroll() {
-            const windowHeight = window.innerHeight;
-            reveals.forEach(reveal => {
-                const revealTop = reveal.getBoundingClientRect().top;
-                if (revealTop < windowHeight - 100) {
-                    reveal.classList.add("show");
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+        animateGalaxy();
+
+        /* SCROLL & REVEAL */
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener("click", function(e) {
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: "smooth" });
                 }
             });
-        }
-        window.addEventListener("scroll", revealOnScroll);
-        revealOnScroll();
+        });
+
+        const revealElements = document.querySelectorAll(
+            ".section-heading, .about-grid, .service-card, .skill-group, .project, .small-project, .experience-item, .achievement-card, .certificate-card, .gallery-item"
+        );
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, idx) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("show");
+                    }, idx * 60);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => {
+            el.classList.add("reveal");
+            observer.observe(el);
+        });
+
+        // Typing Effect
+        document.addEventListener("DOMContentLoaded", () => {
+            const heroSpan = document.querySelector(".hero h1 span");
+            if (heroSpan) {
+                const text = heroSpan.textContent;
+                heroSpan.textContent = "";
+                
+                const cursor = document.createElement("span");
+                cursor.className = "typing-cursor";
+                heroSpan.parentNode.appendChild(cursor);
+
+                let i = 0;
+                function type() {
+                    if (i < text.length) {
+                        heroSpan.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, 120);
+                    }
+                }
+                setTimeout(type, 300);
+            }
+        });
     </script>
 </body>
 </html>
