@@ -209,9 +209,11 @@
         .system-info h3 { font-size: 18px; margin: 5px 0 2px; text-align: left; }
         .system-info > p:not(.mono) { color: var(--gray); font-size: 11px; text-align: left; }
         .divider { height: 1px; background: var(--border); margin: 20px 0; }
+        
         .focus-list { display: flex; flex-direction: column; gap: 8px; }
         .focus-list div { display: flex; justify-content: space-between; color: var(--gray); font-family: "DM Mono", monospace; font-size: 9px; }
         .focus-list b { color: var(--white); }
+        
         .card-bottom { padding: 12px 18px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 8px; }
         .card-bottom strong { color: var(--blue); }
 
@@ -252,11 +254,20 @@
 
         /* PROJECTS */
         .project.featured { display: grid; grid-template-columns: 1.3fr 0.9fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
-        .project-visual { padding: 35px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, rgba(27, 47, 86, 0.5), rgba(14, 23, 46, 0.8) 70%); }
-        .phone-stack { position: relative; width: 190px; }
+        
+        .project-visual { 
+            padding: 50px 35px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            background: radial-gradient(circle at center, rgba(27, 47, 86, 0.5), rgba(14, 23, 46, 0.8) 70%); 
+        }
+        
+        .phone-stack { position: relative; width: 190px; margin-top: 10px; }
         .phone-frame { border-radius: 22px; overflow: hidden; border: 4px solid #1a2c4e; box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
-        .phone-frame.secondary { position: absolute; top: -30px; left: -65px; width: 155px; transform: rotate(-11deg); opacity: 0.55; }
+        .phone-frame.secondary { position: absolute; top: -10px; left: -55px; width: 155px; transform: rotate(-11deg); opacity: 0.55; }
         .phone-frame.primary { position: relative; z-index: 2; transform: rotate(4deg); }
+        
         .project-info { padding: 35px 30px; display: flex; flex-direction: column; justify-content: center; }
         .project-meta { display: flex; justify-content: flex-start; color: var(--blue); font-family: "DM Mono", monospace; font-size: 9px; margin-bottom: 20px; }
         .project-info h3 { font-size: clamp(28px, 3.5vw, 45px); line-height: 1; letter-spacing: -1px; margin-bottom: 18px; text-align: left; }
@@ -294,6 +305,7 @@
             font-weight: 600;
         }
         .case-study-toggle:hover { box-shadow: 0 0 20px rgba(138, 226, 255, 0.5); }
+        
         .case-study {
             grid-column: 1 / -1;
             max-height: 0;
@@ -324,7 +336,6 @@
             height: 100%; 
         }
 
-        /* Bingkai Gambar Seragam */
         .case-study-img-wrapper {
             height: 320px; 
             width: 100%;
@@ -344,7 +355,6 @@
             object-fit: contain; 
         }
 
-        /* Khusus User Flow Agar Tampil Utuh */
         .case-study-img-wrapper.userflow-wrapper {
             height: auto; 
             max-height: none;
@@ -358,7 +368,6 @@
             object-fit: contain;
         }
 
-        /* Teks Deskripsi Gambar Rata Kanan-Kiri */
         .case-study-images figcaption { 
             padding: 18px; 
             color: var(--gray); 
@@ -553,9 +562,8 @@
                             <div class="divider"></div>
                             <p class="mono green">CURRENT_FOCUS</p>
                             <div class="focus-list">
-                                <div><span>UI/UX DESIGN</span><b>88%</b></div>
-                                <div><span>WEB DEV</span><b>78%</b></div>
-                                <div><span>DATA ANALYTICS</span><b>75%</b></div>
+                                <div><span>UI/UX DESIGN</span><b>96%</b></div>
+                                <div><span>FRONTEND DEV</span><b>85%</b></div>
                             </div>
                         </div>
                     </div>
@@ -619,7 +627,16 @@
             <div class="skills-container">
                 <div class="skill-group">
                     <div class="skill-title"><h3>UI / UX DESIGN</h3></div>
-                    <div class="skill-items"><span>Figma</span><span>Wireframing</span><span>Prototyping</span><span>User Flow</span><span>Human-Centered Design</span><span>Design Thinking</span></div>
+                    <div class="skill-items">
+                        <span>Figma</span>
+                        <span>Wireframing</span>
+                        <span>Mockup</span>
+                        <span>Prototyping</span>
+                        <span>User Flow</span>
+                        <span>User-Centered Design</span>
+                        <span>Human-Centered Design</span>
+                        <span>Design Thinking</span>
+                    </div>
                 </div>
                 <div class="skill-group">
                     <div class="skill-title"><h3>DEVELOPMENT</h3></div>
@@ -672,7 +689,7 @@
                             <div class="case-study-images">
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="https://i.ibb.co/LhbV44L/puncakhill-wireframe-home.jpg" alt="Wireframe Home & Menu">
+                                        <img src="puncakhill-wireframe-home.jpg" alt="Wireframe Home & Menu">
                                     </div>
                                     <figcaption>
                                         <strong>Home & Menu:</strong> This flow maps out how users discover and select food. The home page surfaces the main promo and visitors' favorite items at the top to speed up ordering decisions, while menu categories (Makanan, Sayur, Snack, Minuman) let users filter choices quickly. Each category lists items with clear pricing, and the cart status stays visible at the bottom of the screen so users remain aware of their order without leaving the page.
@@ -681,7 +698,7 @@
                                 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="https://i.ibb.co/PZrNfQY/puncakhill-wireframe-cart.jpg" alt="Wireframe Cart & Checkout">
+                                        <img src="puncakhill-wireframe-cart.jpg" alt="Wireframe Cart & Checkout">
                                     </div>
                                     <figcaption>
                                         <strong>Cart & Checkout:</strong> This flow was designed to minimize friction when completing an order. When the cart is empty, users are redirected back to the menu with a clear message. Once items are added, the "Your Order" page shows the order summary alongside customer details (name, table number, additional notes) in a single view, so users don't have to jump between screens. The checkout stage then presents a transparent billing breakdown (subtotal, tax, total) along with several payment methods (QRIS, Virtual Account, Cash on Site), each with a short description to help users choose confidently.
@@ -690,7 +707,7 @@
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="https://i.ibb.co/hVmdQ4X/puncakhill-wireframe-pesanan.jpg" alt="Wireframe Orders">
+                                        <img src="puncakhill-wireframe-pesanan.jpg" alt="Wireframe Orders">
                                     </div>
                                     <figcaption>
                                         <strong>Orders:</strong> This page acts as a summary users can revisit to check their order status, showing the order details and a button to track status directly. If no order has been placed yet, an empty state message redirects users back to the menu, so this page never leaves them stuck.
@@ -699,7 +716,7 @@
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="https://i.ibb.co/M9d8hX5/puncakhill-wireframe-about.jpg" alt="Wireframe About Us">
+                                        <img src="puncakhill-wireframe-about.jpg" alt="Wireframe About Us">
                                     </div>
                                     <figcaption>
                                         <strong>About Us:</strong> This page provides supporting information users need before or after ordering — address, operating hours, contact, and a short restaurant description. Information is grouped into separate cards for quick scanning, rather than long paragraphs users have to read in full.
@@ -716,7 +733,7 @@
                             <div class="case-study-images">
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="https://i.ibb.co/k2x28x7/puncakhill-mockup-home.jpg" alt="Mockup Home & Menu">
+                                        <img src="puncakhill-mockup-home.jpg" alt="Mockup Home & Menu">
                                     </div>
                                     <figcaption>
                                         <strong>Home & Menu:</strong> The home page now leads with a full-width hero image of the featured promo, paired with warmer visual cues like the "Pesan Sekarang" button placed directly on the highlighted item. Category tabs use both icons and color states (active category highlighted in green) to make filtering feel more intuitive, and each menu item now displays a product photo alongside its price to support quicker decision-making.
@@ -725,7 +742,7 @@
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="https://i.ibb.co/v4d2HdB/puncakhill-mockup-cart.jpg" alt="Mockup Cart & Checkout">
+                                        <img src="puncakhill-mockup-cart.jpg" alt="Mockup Cart & Checkout">
                                     </div>
                                     <figcaption>
                                         <strong>Cart & Checkout:</strong> The cart and checkout flow carries over the same information structure from the wireframe stage, now refined with product thumbnails, clear input field styling, and consistent button hierarchy — the primary action ("Lanjut Ke Checkout", "Bayar Sekarang") is always the most visually prominent element on each screen, guiding users toward task completion without hesitation.
@@ -734,7 +751,7 @@
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="https://i.ibb.co/b39d1bB/puncakhill-mockup-pesanan.jpg" alt="Mockup Orders">
+                                        <img src="puncakhill-mockup-pesanan.jpg" alt="Mockup Orders">
                                     </div>
                                     <figcaption>
                                         <strong>Orders:</strong> The Orders page keeps its two states (order summary vs. empty state) but now uses stronger visual contrast — a white card against the green background — to draw attention to the order details.
@@ -743,7 +760,7 @@
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="https://i.ibb.co/9v3jD2g/puncakhill-mockup-about.jpg" alt="Mockup About Us">
+                                        <img src="puncakhill-mockup-about.jpg" alt="Mockup About Us">
                                     </div>
                                     <figcaption>
                                         <strong>About Us:</strong> The About Us page introduces a real restaurant photo and a location-tagged image, giving users a tangible sense of the place before they visit, alongside the same card-based layout used in the wireframe for quick-scan information like address, hours, and contact.
@@ -758,7 +775,7 @@
                             <div class="case-study-images" style="grid-template-columns: 1fr; max-width: 650px; margin: 0 auto;">
                                 <figure>
                                     <div class="case-study-img-wrapper userflow-wrapper">
-                                        <img src="https://i.ibb.co/wJtW78w/puncakhill-userflow.jpg" alt="User Flow Diagram">
+                                        <img src="puncakhill-userflow.jpg" alt="User Flow Diagram">
                                     </div>
                                     <figcaption>
                                         <strong>User Flow:</strong> Alongside the visual design, I mapped out the complete user flow to validate the logical path a user takes from entry to task completion. The flow starts at the home page, where users can branch off to view restaurant information ("Tentang Kami") or continue toward ordering. The core loop — select and add a menu item, then decide whether to add another — was designed as a loop rather than a linear step, since real ordering behavior rarely stops at just one item. Once the user decides not to add anything further, the flow moves linearly through filling in customer information, checkout and payment, and ends with a confirmation of successful payment and access to the order status page. Mapping this out early helped confirm that there were no dead ends in the flow — every screen either leads forward or gives users a clear way back to the menu.
@@ -879,13 +896,13 @@
                     </a>
                     
                     <!-- PHONE ICON -->
-                    <a href="tel:+6281219041337" class="contact-item">
+                    <a href="https://wa.me/message/J3I6RCP5ZWOAK1" class="contact-item">
                         <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                         <span>+62 812-1904-1337</span>
                     </a>
 
                     <!-- INSTAGRAM ICON -->
-                    <a href="https://instagram.com" target="_blank" class="contact-item">
+                    <a href="https://www.instagram.com/today.lalaa?stkn=dDJ5c2xlbWloOW15" target="_blank" class="contact-item">
                         <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         <span>@today.lalaa</span>
                     </a>
