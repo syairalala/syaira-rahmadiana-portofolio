@@ -235,7 +235,7 @@
 
         /* SERVICES */
         .what-i-do { background: transparent; backdrop-filter: none; }
-        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
         .service-card { padding: 28px; border: 1px solid var(--border); background: rgba(14, 23, 46, 0.5); backdrop-filter: blur(10px); border-radius: 16px; position: relative; transition: all 0.3s ease; }
         .service-card:hover { transform: translateY(-6px); border-color: var(--blue); box-shadow: 0 10px 30px rgba(138, 226, 255, 0.15); }
         .service-icon { width: 50px; height: 50px; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 20px; margin-bottom: 25px; background: rgba(138, 226, 255, 0.05); }
@@ -267,8 +267,12 @@
         .project-result span { color: var(--gray); font-family: "DM Mono", monospace; font-size: 7px; display: block; text-align: left; }
         .project-button { width: fit-content; padding: 10px 16px; border: 1px solid var(--blue); border-radius: 25px; font-size: 10px; color: var(--blue); transition: 0.3s; }
         .project-button:hover { background: var(--blue); color: var(--background); }
+        .project-buttons-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        .project-button.ghost { border: 1px solid var(--border); color: var(--gray); background: transparent; }
+        .project-button.ghost:hover { border-color: var(--blue); color: var(--blue); background: transparent; }
 
         .project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .project-row.single { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
         .small-project { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease; }
         .small-project:hover { transform: translateY(-5px); border-color: var(--blue); }
         .project-image { height: 210px; position: relative; overflow: hidden; }
@@ -279,6 +283,36 @@
         .small-project-info h3 { font-size: 24px; margin: 8px 0; text-align: left; }
         .small-project-info p { color: var(--gray); font-size: 12px; margin-bottom: 15px; }
         .project-tools { color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 8px; text-align: left; }
+
+        /* CASE STUDY (expandable process view) */
+        .case-study-toggle {
+            width: fit-content;
+            padding: 10px 16px;
+            border-radius: 25px;
+            font-size: 10px;
+            color: var(--background);
+            background: linear-gradient(135deg, var(--blue), #5c9eff);
+            border: none;
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+        }
+        .case-study-toggle:hover { box-shadow: 0 0 20px rgba(138, 226, 255, 0.5); }
+        .case-study {
+            grid-column: 1 / -1;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            border-top: 1px solid var(--border);
+        }
+        .case-study.open { max-height: 2400px; }
+        .case-study-inner { padding: 35px; }
+        .case-study-inner > p { color: var(--gray); font-size: 12px; margin-bottom: 25px; }
+        .case-study-stage { margin-bottom: 30px; }
+        .case-study-stage h4 { font-size: 14px; color: var(--blue); margin-bottom: 12px; text-align: left; letter-spacing: 0.5px; }
+        .case-study-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .case-study-images figure { margin: 0; background: rgba(6, 11, 25, 0.6); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+        .case-study-images img { width: 100%; height: 150px; object-fit: cover; }
+        .case-study-images figcaption { padding: 8px 10px; color: var(--gray); font-size: 9px; text-align: left; font-family: "DM Mono", monospace; }
 
         /* EXPERIENCE & GALLERY */
         .experience { background: transparent; backdrop-filter: none; }
@@ -306,6 +340,7 @@
         .achievement-image img { width: 100%; height: 100%; object-fit: cover; }
 
         .certificate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .certificate-grid.single { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
         .certificate-card { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: 0.3s; }
         .certificate-card:hover { border-color: var(--blue); }
         .certificate-image { height: 200px; overflow: hidden; }
@@ -389,6 +424,8 @@
             .system-body { grid-template-columns: 1fr; }
             .photo-frame { aspect-ratio: 1; max-width: 200px; margin: 0 auto; }
 
+            .case-study-images { grid-template-columns: 1fr 1fr; }
+
             footer { flex-direction: column; text-align: center; align-items: center; }
         }
 
@@ -399,6 +436,7 @@
             .phone-stack { width: 140px; }
             .phone-frame.secondary { width: 115px; left: -45px; }
             .contact-details { flex-direction: column; align-items: center; }
+            .case-study-images { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -427,8 +465,8 @@
             <div class="hero-left">
                 <div class="status"><span></span> AVAILABLE FOR INTERNSHIP</div>
                 <h1>Hi, I'm <br><span>Syaira.</span></h1>
-                <h2>Bridging complex systems, data insights, <span>& digital experience.</span></h2>
-                <p class="hero-description">Hello, I'm Syaira! An Information Systems undergraduate passionate about designing seamless digital workflows, optimizing database architectures, and turning raw data into strategic insights. Dedicated to bridging technology and human needs to deliver high-impact digital solutions.</p>
+                <h2>Crafting intuitive digital experiences, <span>backed by data & systems thinking.</span></h2>
+                <p class="hero-description">Hello, I'm Syaira! An Information Systems undergraduate passionate about UI/UX design and frontend development — designing user-centered interfaces in Figma and bringing them to life with HTML, CSS, and JavaScript. I focus on turning user needs into digital experiences that are intuitive, accessible, and genuinely useful.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="button-primary">Explore My Work <span>↗</span></a>
                     <a href="#contact" class="button-secondary">Contact Me</a>
@@ -452,10 +490,9 @@
                             <div class="divider"></div>
                             <p class="mono green">CURRENT_FOCUS</p>
                             <div class="focus-list">
-                                <div><span>IT SUPPORT</span><b>82%</b></div>
-                                <div><span>DATA ANALYTICS</span><b>75%</b></div>
-                                <div><span>WEB DEV</span><b>78%</b></div>
                                 <div><span>UI/UX DESIGN</span><b>88%</b></div>
+                                <div><span>WEB DEV</span><b>78%</b></div>
+                                <div><span>DATA ANALYTICS</span><b>75%</b></div>
                             </div>
                         </div>
                     </div>
@@ -474,14 +511,14 @@
             </div>
             <div class="about-grid">
                 <div class="about-main">
-                    <p class="big-text">Transforming complex system requirements into intuitive, data-driven digital experiences.</p>
-                    <p>I am a 7th-semester Information Systems student at Universitas Gunadarma with a strong foundation in database management, data analytics, and user experience design. My journey in tech is driven by curiosity about how systems function under the hood and how they can be refined to better serve end-users. With hands-on experience as a Laboratory Assistant, I thrive in environments where analytical thinking, technical problem-solving, and clear communication intersect to create meaningful technology solutions.</p>
+                    <p class="big-text">Turning user needs into intuitive, well-designed digital experiences.</p>
+                    <p>I am a 7th-semester Information Systems student at Universitas Gunadarma with a strong foundation in UI/UX design and frontend development. My journey in tech is driven by curiosity about how people actually use digital products, and how thoughtful design — through Human-Centered Design and Design Thinking — can make complex systems feel simple and intuitive. With hands-on experience as a Laboratory Assistant, I thrive in environments where analytical thinking, technical problem-solving, and clear communication intersect to create meaningful technology solutions.</p>
                 </div>
                 <div class="about-facts">
                     <div class="fact"><span>EDUCATION</span><strong>Information Systems</strong><small>Universitas Gunadarma</small></div>
                     <div class="fact"><span>SEMESTER</span><strong>07</strong><small>Undergraduate Student</small></div>
                     <div class="fact"><span>GPA</span><strong>3.69</strong><small>Current GPA</small></div>
-                    <div class="fact"><span>INTEREST</span><strong>IT · UI/UX · Data</strong><small>Digital Solutions</small></div>
+                    <div class="fact"><span>INTEREST</span><strong>UI/UX · Frontend Dev</strong><small>Digital Solutions</small></div>
                 </div>
             </div>
         </section>
@@ -501,16 +538,10 @@
                         <div class="service-tags"><span>Figma</span><span>UI/UX</span><span>UCD</span></div>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">⌘</div>
-                        <h3>Analyze</h3>
-                        <p>Deconstructing complex business processes into structured system models using UML, ERD, and SQL databases. Focused on identifying system bottlenecks, defining core technical requirements, and ensuring database integrity.</p>
-                        <div class="service-tags"><span>UML</span><span>SQL</span><span>Analysis</span></div>
-                    </div>
-                    <div class="service-card">
                         <div class="service-icon">⟨/⟩</div>
                         <h3>Build</h3>
-                        <p>Translating wireframes and system architecture into responsive web applications and data visualization dashboards. Utilizing modern web tools and Power BI to present actionable business metrics clearly.</p>
-                        <div class="service-tags"><span>HTML</span><span>PHP</span><span>Python</span></div>
+                        <p>Translating wireframes and design systems into clean, responsive web pages. Focused on writing structured markup and styles that bring a UI/UX design to life faithfully across desktop and mobile.</p>
+                        <div class="service-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     </div>
                 </div>
             </div>
@@ -525,11 +556,7 @@
             <div class="skills-container">
                 <div class="skill-group">
                     <div class="skill-title"><h3>UI / UX DESIGN</h3></div>
-                    <div class="skill-items"><span>Figma</span><span>Wireframing</span><span>Prototyping</span><span>User Flow</span></div>
-                </div>
-                <div class="skill-group">
-                    <div class="skill-title"><h3>DATA</h3></div>
-                    <div class="skill-items"><span>Power BI</span><span>MySQL</span><span>Oracle</span><span>Python</span></div>
+                    <div class="skill-items"><span>Figma</span><span>Wireframing</span><span>Prototyping</span><span>User Flow</span><span>Human-Centered Design</span><span>Design Thinking</span></div>
                 </div>
                 <div class="skill-group">
                     <div class="skill-title"><h3>DEVELOPMENT</h3></div>
@@ -565,12 +592,47 @@
                         <div><strong>82.6</strong><span>SUS SCORE</span></div>
                         <div><strong>B</strong><span>GRADE</span></div>
                     </div>
-                    <a href="https://tinyurl.com/Prototype-PuncakHillResto" target="_blank" class="project-button">View Prototype ↗</a>
+                    <div class="project-buttons-row">
+                        <a href="https://tinyurl.com/Prototype-PuncakHillResto" target="_blank" class="project-button">View Prototype ↗</a>
+                        <button class="case-study-toggle" onclick="toggleCaseStudy('puncakhill-case')">View Design Process</button>
+                    </div>
+                </div>
+
+                <!-- CASE STUDY / DESIGN PROCESS -->
+                <div class="case-study" id="puncakhill-case">
+                    <div class="case-study-inner">
+                        <p>Following a User-Centered Design process, the project moved from low-fidelity wireframes to high-fidelity mockups, then a mapped user flow — validating structure first, then visual design, then the end-to-end logic of the ordering journey.</p>
+
+                        <div class="case-study-stage">
+                            <h4>01 — Wireframe / Lo-Fi</h4>
+                            <div class="case-study-images">
+                                <figure><img src="puncakhill-wireframe-home.jpg" alt="Wireframe home & menu"><figcaption>Home & Menu</figcaption></figure>
+                                <figure><img src="puncakhill-wireframe-cart.jpg" alt="Wireframe cart & checkout"><figcaption>Cart & Checkout</figcaption></figure>
+                                <figure><img src="puncakhill-wireframe-about.jpg" alt="Wireframe orders & about"><figcaption>Orders & About Us</figcaption></figure>
+                            </div>
+                        </div>
+
+                        <div class="case-study-stage">
+                            <h4>02 — High-Fidelity Mockup</h4>
+                            <div class="case-study-images">
+                                <figure><img src="puncakhill-mockup-home.jpg" alt="Mockup home & menu"><figcaption>Home & Menu</figcaption></figure>
+                                <figure><img src="puncakhill-mockup-cart.jpg" alt="Mockup cart & checkout"><figcaption>Cart & Checkout</figcaption></figure>
+                                <figure><img src="puncakhill-mockup-about.jpg" alt="Mockup orders & about"><figcaption>Orders & About Us</figcaption></figure>
+                            </div>
+                        </div>
+
+                        <div class="case-study-stage">
+                            <h4>03 — User Flow</h4>
+                            <div class="case-study-images">
+                                <figure><img src="puncakhill-userflow.jpg" alt="User flow diagram"><figcaption>End-to-end ordering flow</figcaption></figure>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
             <!-- PROJECT 2 & 3 -->
-            <div class="project-row">
+            <div class="project-row single">
                 <article class="small-project">
                     <div class="project-image">
                         <img src="hermonia-1.jpg" alt="Hermonia Web">
@@ -581,19 +643,6 @@
                         <h3>HERMONIA</h3>
                         <p>HERMONIA is a modern, responsive e-commerce web platform designed to deliver a smooth online shopping experience. Built from the ground up using HTML, CSS, and JavaScript, the application focuses on clean code structure, intuitive product catalog navigation, dynamic layout adaptation across desktop and mobile views, and seamless user interaction components.</p>
                         <div class="project-tools">HTML · CSS · JavaScript</div>
-                    </div>
-                </article>
-
-                <article class="small-project">
-                    <div class="project-image">
-                        <img src="powerbi-dashboard.jpg" alt="Power BI Dashboard">
-                        <span>DATA</span>
-                    </div>
-                    <div class="small-project-info">
-                        <span>DATA VISUALIZATION</span>
-                        <h3>Branch Sales Dashboard</h3>
-                        <p>The Branch Sales Dashboard is an interactive business intelligence tool developed in Power BI to monitor multi-branch performance metrics. Designed for business decision-makers, the dashboard aggregates sales transaction data to visualize revenue per branch, top-performing product categories, and monthly target achievements—enabling stakeholders to identify growth opportunities quickly.</p>
-                        <div class="project-tools">Power BI · Data Analysis</div>
                     </div>
                 </article>
             </div>
@@ -610,9 +659,9 @@
                 <div class="experience-content">
                     <span>UNIVERSITAS GUNADARMA</span>
                     <h3>Information Systems Laboratory Assistant</h3>
-                    <p>Serving as an Information Systems Laboratory Assistant at Universitas Gunadarma, responsible for mentoring and guiding over 30 undergraduate students through practical technical coursework. Facilitated hands-on laboratory modules covering Database Systems, Data Science, and System Analysis using industry tools such as Oracle MySQL, Python (Jupyter), Power BI, and StarUML. Collaborated closely with faculty staff to ensure curriculum alignment, evaluate technical assignments, and help students troubleshoot complex database queries and analytical scripts.</p>
+                    <p>Serving as an Information Systems Laboratory Assistant at Universitas Gunadarma, mentoring and guiding over 30 undergraduate students through practical technical coursework. Led practicum sessions on UI/UX Design and Web Development — guiding students through wireframing, prototyping, and user flow design in Figma, as well as building web pages with HTML, CSS, JavaScript, and PHP. Collaborated closely with faculty staff to ensure curriculum alignment and evaluate technical assignments.</p>
                     <div class="experience-tags">
-                        <span>Oracle</span><span>MySQL</span><span>Python</span><span>Power BI</span>
+                        <span>Figma</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
                     </div>
                 </div>
             </div>
@@ -646,7 +695,7 @@
                 </div>
                 <div class="achievement-right">
                     <div class="achievement-text">
-                        <p>Awarded the Bronze Medal at the World Innovative Science Project Olympiad (WISPO) 2021 in the Engineering and Technology category, competing against 117 international teams from 23 countries. Co-developed the "Digital Pocketbook on Flood Disaster Mitigation in Jakarta," an interactive digital research project aimed at educating communities on disaster preparedness. Responsible for technical research, digital media development, and presenting the project in English to an international panel of judges.</p>
+                        <p>Awarded the Bronze Medal at the World Innovative Science Project Olympiad (WISPO) 2021 in the Engineering and Technology category, competing against 117 international teams from 23 countries. Designed and produced a "Digital Pocketbook on Flood Disaster Mitigation in Jakarta" — planning its page layout, visual hierarchy, and iconography so that complex disaster-preparedness information would be easy for readers to understand at a glance. Also presented the project in English to an international panel of judges.</p>
                         <a href="https://online.fliphtml5.com/azopm/mplj/" target="_blank" class="achievement-link">Read the Pocketbook ↗</a>
                     </div>
                     <div class="achievement-image">
@@ -662,7 +711,7 @@
                 <p>CERTIFICATES</p>
                 <h2>Proof of the work.</h2>
             </div>
-            <div class="certificate-grid">
+            <div class="certificate-grid single">
                 <div class="certificate-card">
                     <div class="certificate-image">
                         <img src="wispo.jpg" alt="WISPO Certificate">
@@ -671,16 +720,6 @@
                         <span>WISPO · 2021</span>
                         <h3>Bronze Award</h3>
                         <p>World Innovative Science Project Olympiad</p>
-                    </div>
-                </div>
-                <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="cert-excel.jpg" alt="Excel Certificate">
-                    </div>
-                    <div class="certificate-info">
-                        <span>SKILL ACADEMY · 2025</span>
-                        <h3>Ahli Mengolah Data dengan Excel</h3>
-                        <p>Skill Academy by Ruangguru — Score 86</p>
                     </div>
                 </div>
             </div>
@@ -741,6 +780,17 @@
                 mobileToggle.textContent = '☰';
             });
         });
+
+        /* CASE STUDY TOGGLE */
+        function toggleCaseStudy(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('open');
+            const btn = event.target;
+            btn.textContent = el.classList.contains('open') ? 'Hide Design Process' : 'View Design Process';
+            if (el.classList.contains('open')) {
+                setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 300);
+            }
+        }
 
         /* GALAXY BACKGROUND + CURSOR SPARKLE TRAIL */
         const canvas = document.getElementById("galaxy-canvas");
