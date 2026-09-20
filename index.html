@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syaira Rahmadiana | Information Systems</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -281,6 +281,7 @@
 
         .project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
         .project-row.single { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
+        .project-row.triple { grid-template-columns: repeat(3, 1fr); }
         .small-project { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease; }
         .small-project:hover { transform: translateY(-5px); border-color: var(--blue); }
         .project-image { height: 210px; position: relative; overflow: hidden; }
@@ -291,6 +292,8 @@
         .small-project-info h3 { font-size: 24px; margin: 8px 0; text-align: left; }
         .small-project-info p { color: var(--gray); font-size: 12px; margin-bottom: 15px; }
         .project-tools { color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 8px; text-align: left; }
+        .small-project-link { display: inline-block; width: fit-content; margin-top: 14px; padding: 10px 16px; border: 1px solid var(--blue); border-radius: 25px; font-size: 10px; color: var(--blue); font-family: "Inter", sans-serif; transition: 0.3s; }
+        .small-project-link:hover { background: var(--blue); color: var(--background); }
 
         /* CASE STUDY REVISED STYLES (CLEAN & SEAMLESS) */
         .case-study-toggle {
@@ -404,6 +407,7 @@
 
         /* ACHIEVEMENTS & CERTIFICATES */
         .achievement-card { display: grid; grid-template-columns: 0.7fr 1.3fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+        .achievement-card + .achievement-card { margin-top: 20px; }
         .achievement-left { padding: 35px; background: linear-gradient(145deg, rgba(27, 46, 84, 0.6), rgba(14, 23, 46, 0.8)); }
         .achievement-left h3 { font-size: clamp(35px, 4vw, 50px); line-height: 0.9; margin-top: 30px; color: var(--blue); text-shadow: 0 0 15px rgba(138, 226, 255, 0.3); text-align: left; }
         .achievement-right { padding: 35px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
@@ -454,6 +458,7 @@
             .skill-title h3 { margin-bottom: 5px; }
 
             .project.featured { grid-template-columns: 1fr; }
+            .project-row.triple { grid-template-columns: 1fr 1fr; }
             .achievement-card { grid-template-columns: 1fr; }
             .achievement-left { padding: 25px; }
             .achievement-left h3 { margin-top: 0; }
@@ -621,7 +626,6 @@
         <section id="skills" class="section skills">
             <div class="section-heading">
                 <p>SKILLS & TOOLS</p>
-                instruction
                 <h2>My digital toolkit.</h2>
             </div>
             <div class="skills-container">
@@ -773,17 +777,32 @@
             </article>
 
             <!-- PROJECT 2 & 3 -->
-            <div class="project-row single">
+            <div class="project-row">
                 <article class="small-project">
                     <div class="project-image">
-                        <img src="hermonia-1.jpg" alt="Hermonia Web">
-                        <span>WEB</span>
+                        <img src="dsf-day2-makanyuk.jpg" alt="MakanYuk Weekly Meal Bundle Promo">
+                        <span>GRAPHIC DESIGN</span>
                     </div>
                     <div class="small-project-info">
-                        <span>WEB DEVELOPMENT</span>
-                        <h3>HERMONIA</h3>
-                        <p>HERMONIA is a modern, responsive e-commerce web platform designed to deliver a smooth online shopping experience. Built from the ground up using HTML, CSS, and JavaScript, the application focuses on clean code structure, intuitive product catalog navigation, dynamic layout adaptation across desktop and mobile views, and seamless user interaction components.</p>
-                        <div class="project-tools">HTML · CSS · JavaScript</div>
+                        <span>DSF-54.0 · DAY 2 MINI CASE</span>
+                        <h3>MakanYuk Promo</h3>
+                        <p>Translated a client brief into a promotional visual for MakanYuk's "Weekly Meal Bundle" campaign, encouraging customers to purchase a 5-day meal package. The design communicates the core value proposition — savings up to 50% plus a free drink — through bold typography, a high-contrast color scheme, and appetizing food photography, with a clear call-to-action guiding the next step.</p>
+                        <div class="project-tools">Canva</div>
+                        <a href="https://tinyurl.com/dsf-day2-miniproject-syaira" target="_blank" class="small-project-link">View Details ↗</a>
+                    </div>
+                </article>
+
+                <article class="small-project">
+                    <div class="project-image">
+                        <img src="dsf-day3-canteen.jpg" alt="Campus Canteen Pre-order App">
+                        <span>UI/UX</span>
+                    </div>
+                    <div class="small-project-info">
+                        <span>DSF-54.0 · DAY 3 MINI PROJECT</span>
+                        <h3>Campus Canteen Pre-order</h3>
+                        <p>Designed a pre-order app concept solving a real student pain point — long canteen queues and unclear menu availability during short class breaks. Mapped a 6-step user flow and three core screens (menu, order summary, pickup status), then revised the menu screen after peer testing to make sold-out items instantly clear and add quick filters, so students with a tight class gap could decide faster.</p>
+                        <div class="project-tools">Figma</div>
+                        <a href="https://tinyurl.com/dsf-day3-miniproject-syaira" target="_blank" class="small-project-link">View Details ↗</a>
                     </div>
                 </article>
             </div>
@@ -844,6 +863,21 @@
                     </div>
                 </div>
             </div>
+
+            <div class="achievement-card">
+                <div class="achievement-left">
+                    <span>DIBIMBING · 2026</span>
+                    <h3>DSF-54.0</h3>
+                </div>
+                <div class="achievement-right">
+                    <div class="achievement-text">
+                        <p>Completed DSF-54.0: Graphic Design & UI/UX, a 5-day intensive program by Dibimbing covering the end-to-end UI/UX design process. Learned design fundamentals and layout systems for print and digital, then applied a research-first approach — identifying and validating real user problems, translating insights into user flows and wireframes, and building interfaces in Figma. Practiced usability testing using real user feedback, observed a live mock interview session with real job-seeking candidates, and closed with sessions on CV-building and portfolio strategy alongside Dibimbing alumni.</p>
+                    </div>
+                    <div class="achievement-image">
+                        <img src="dsf-certificate.jpg" alt="DSF-54.0 Certificate">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- CERTIFICATES -->
@@ -852,7 +886,7 @@
                 <p>CERTIFICATES</p>
                 <h2>Proof of the work.</h2>
             </div>
-            <div class="certificate-grid single">
+            <div class="certificate-grid">
                 <div class="certificate-card">
                     <div class="certificate-image">
                         <img src="wispo.jpg" alt="WISPO Certificate">
@@ -861,6 +895,16 @@
                         <span>WISPO · 2021</span>
                         <h3>Bronze Award</h3>
                         <p>World Innovative Science Project Olympiad</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="dsf-certificate.jpg" alt="DSF-54.0 Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <span>DIBIMBING · 2026</span>
+                        <h3>DSF-54.0: Graphic Design & UI/UX</h3>
+                        <p>5-Day Intensive Program</p>
                     </div>
                 </div>
             </div>
