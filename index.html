@@ -46,7 +46,7 @@
             cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238ae2ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v20M2 12h20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4'/></svg>") 12 12, auto;
         }
 
-        a, button, .service-card, .small-project, .certificate-card {
+        a, button, .service-card, .small-project, .certificate-card, .graphic-card {
             cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='%238ae2ff' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v20M2 12h20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4'/></svg>") 14 14, pointer !important;
         }
 
@@ -124,7 +124,7 @@
 
         .logo { font-size: 26px; font-weight: 800; letter-spacing: -1.5px; }
         .logo span { color: var(--blue); text-shadow: 0 0 10px rgba(138, 226, 255, 0.5); }
-        .navbar nav { display: flex; gap: 35px; }
+        .navbar nav { display: flex; gap: 30px; }
         .navbar nav a { color: var(--gray); font-size: 12px; transition: all 0.3s ease; }
         .navbar nav a:hover { color: var(--blue); text-shadow: 0 0 8px rgba(138, 226, 255, 0.4); }
         .nav-contact { padding: 10px 18px; border: 1px solid var(--blue); border-radius: 30px; font-size: 12px; transition: all 0.3s ease; color: var(--blue); }
@@ -223,6 +223,17 @@
         .section-heading p { color: var(--gray); font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; text-align: left; }
         .section-heading h2 { font-size: clamp(28px, 4vw, 52px); line-height: 1.1; letter-spacing: -1px; text-align: left; }
 
+        .sub-category-title {
+            font-size: 22px;
+            color: var(--blue);
+            margin: 40px 0 20px;
+            text-align: left;
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+            font-family: "DM Mono", monospace;
+            letter-spacing: 1px;
+        }
+
         /* ABOUT */
         .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; }
         .about-main p { color: var(--gray); font-size: 14px; margin-bottom: 20px; }
@@ -252,7 +263,7 @@
         .skill-items span { padding: 8px 14px; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; color: var(--white); font-size: 11px; transition: 0.3s; }
         .skill-items span:hover { border-color: var(--blue); box-shadow: 0 0 10px rgba(138, 226, 255, 0.2); }
 
-        /* PROJECTS */
+        /* PROJECTS GENERAL */
         .project.featured { display: grid; grid-template-columns: 1.3fr 0.9fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
         .project.featured + .project.featured { margin-top: 30px; }
 
@@ -280,7 +291,7 @@
         .project-button:hover { background: var(--blue); color: var(--background); }
         .project-buttons-row { display: flex; gap: 10px; flex-wrap: wrap; }
 
-        .project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+        .project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
         .small-project { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease; }
         .small-project:hover { transform: translateY(-5px); border-color: var(--blue); }
         .project-image { height: 210px; position: relative; overflow: hidden; }
@@ -293,6 +304,21 @@
         .project-tools { color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 8px; text-align: left; }
         .small-project-link { display: inline-block; width: fit-content; margin-top: 14px; padding: 10px 16px; border: 1px solid var(--blue); border-radius: 25px; font-size: 10px; color: var(--blue); font-family: "Inter", sans-serif; transition: 0.3s; }
         .small-project-link:hover { background: var(--blue); color: var(--background); }
+
+        /* GRAPHIC DESIGN GRID */
+        .graphic-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
+        .graphic-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+        .graphic-card { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+        .graphic-card:hover { transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 10px 25px rgba(138, 226, 255, 0.15); }
+        .graphic-img-holder { height: 260px; overflow: hidden; background: rgba(6, 11, 25, 0.8); display: flex; align-items: center; justify-content: center; padding: 10px; }
+        .graphic-img-holder.tall { height: 380px; }
+        .graphic-img-holder.banner-fit { height: 200px; }
+        .graphic-img-holder img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .graphic-card-info { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .graphic-card-info span { color: var(--blue); font-family: "DM Mono", monospace; font-size: 9px; display: block; text-align: left; margin-bottom: 4px; }
+        .graphic-card-info h4 { font-size: 18px; margin-bottom: 8px; text-align: left; color: var(--white); }
+        .graphic-card-info p { color: var(--gray); font-size: 12px; margin-bottom: 12px; }
+        .graphic-tools { color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 8px; text-align: left; margin-top: auto; }
 
         /* CASE STUDY REVISED STYLES */
         .case-study-toggle {
@@ -440,6 +466,8 @@
             .skill-title h3 { margin-bottom: 5px; }
 
             .project.featured { grid-template-columns: 1fr; }
+            .graphic-grid, .graphic-grid.three-col { grid-template-columns: 1fr; }
+
             .achievement-card { grid-template-columns: 1fr; }
             .achievement-left { padding: 25px; }
             .achievement-left h3 { margin-top: 0; }
@@ -506,7 +534,8 @@
             <a href="#about" class="nav-link">About</a>
             <a href="#services" class="nav-link">Services</a>
             <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#uiux-projects" class="nav-link">UI/UX Projects</a>
+            <a href="#graphic-design" class="nav-link">Graphic Design</a>
             <a href="#experience" class="nav-link">Experience</a>
             <a href="#certificates" class="nav-link">Certificates</a>
         </nav>
@@ -522,7 +551,7 @@
                 <h2>Crafting user-centered interfaces & visual experiences, <span>backed by systems thinking.</span></h2>
                 <p class="hero-description">Hello, I'm Syaira Rahmadiana! An Information Systems undergraduate specializing in <strong>UI/UX Design</strong> and <strong>Graphic Design</strong>. I design intuitive visual systems and digital experiences in Figma and Canva, bridging human-centered design principles with clean frontend execution in HTML, CSS, and JavaScript.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="button-primary">Explore My Work <span>↗</span></a>
+                    <a href="#uiux-projects" class="button-primary">Explore My Work <span>↗</span></a>
                     <a href="#contact" class="button-secondary">Contact Me</a>
                 </div>
             </div>
@@ -632,10 +661,21 @@
                         <span>Canva</span>
                         <span>Adobe Photoshop</span>
                         <span>Affinity</span>
+                        <span>ibisPaint X</span>
+                        <span>Infinite Painter</span>
                         <span>Typography & Layout</span>
                         <span>Color Theory</span>
                         <span>Visual Branding</span>
-                        <span>Social Media Graphics</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-title"><h3>3D ART & ANIMATION</h3></div>
+                    <div class="skill-items">
+                        <span>Blender 3D</span>
+                        <span>3D Modeling</span>
+                        <span>Interior Rendering</span>
+                        <span>Character Modeling</span>
+                        <span>3D Animation</span>
                     </div>
                 </div>
                 <div class="skill-group">
@@ -645,11 +685,11 @@
             </div>
         </section>
 
-        <!-- PROJECTS -->
-        <section id="projects" class="section projects">
+        <!-- PART 1: UI/UX PROJECTS -->
+        <section id="uiux-projects" class="section projects">
             <div class="section-heading">
-                <p>SELECTED PROJECTS</p>
-                <h2>Featured UI/UX & Design Work.</h2>
+                <p>CATEGORY 01</p>
+                <h2>UI/UX Design Projects.</h2>
             </div>
 
             <!-- FEATURED PROJECT 1: AKSIAGA -->
@@ -667,13 +707,13 @@
                 <div class="project-info">
                     <div class="project-meta"><span>UI/UX CASE STUDY · HCD METHODOLOGY · FIGMA</span></div>
                     <h3>AKSIAGA</h3>
-                    <p>AKSIAGA is a emergency disaster response mobile application designed using the Human-Centered Design (HCD) methodology. Built around insights from in-depth interviews with 7 participants, the app addresses critical needs for emergency evacuation navigation, disaster preparedness guides, and one-tap emergency contact access during crisis situations. Through structured usability evaluation, AKSIAGA achieved a Single Ease Question (SEQ) score of 6.86/7 and a System Usability Scale (SUS) score of 89.9 (Grade A / Excellent).</p>
+                    <p>AKSIAGA is an emergency disaster response mobile application designed using the Human-Centered Design (HCD) methodology. Built around insights from in-depth interviews with 7 participants, the app addresses critical needs for emergency evacuation navigation, disaster preparedness guides, and one-tap emergency contact access during crisis situations. Through structured usability evaluation, AKSIAGA achieved a Single Ease Question (SEQ) score of 6.86/7 and a System Usability Scale (SUS) score of 89.9 (Grade A / Excellent).</p>
                     <div class="project-result">
                         <div><strong>89.9</strong><span>SUS SCORE (GRADE A)</span></div>
                         <div><strong>6.86</strong><span>SEQ SCORE</span></div>
                     </div>
                     <div class="project-buttons-row">
-                        <a href="#" target="_blank" class="project-button">View Prototype ↗</a>
+                        <a href="https://tinyurl.com/AKSIAGA-BTS-USB" target="_blank" class="project-button">View Prototype ↗</a>
                         <button class="case-study-toggle" onclick="toggleCaseStudy('aksiaga-case', this)">View Design Process</button>
                     </div>
                 </div>
@@ -890,22 +930,8 @@
                 </div>
             </article>
 
-            <!-- OTHER SMALL PROJECTS -->
+            <!-- OTHER SMALL UI/UX PROJECTS -->
             <div class="project-row">
-                <article class="small-project">
-                    <div class="project-image">
-                        <img src="dsf-day2-makanyuk.jpg" alt="MakanYuk Graphic Design Promotional Banner">
-                        <span>GRAPHIC DESIGN</span>
-                    </div>
-                    <div class="small-project-info">
-                        <span>CAMPAIGN VISUAL DESIGN</span>
-                        <h3>MakanYuk Promo Poster</h3>
-                        <p>Translated a client brief into a high-converting promotional visual for MakanYuk's "Weekly Meal Bundle". Leveraged bold typography, high-contrast colors, and strategic food photography to highlight discount offers.</p>
-                        <div class="project-tools">Canva · Visual Communication</div>
-                        <a href="https://tinyurl.com/dsf-day2-miniproject-syaira" target="_blank" class="small-project-link">View Graphic Design ↗</a>
-                    </div>
-                </article>
-
                 <article class="small-project">
                     <div class="project-image">
                         <img src="dsf-day3-canteen.jpg" alt="Campus Canteen Pre-order Mobile App UI Design">
@@ -917,6 +943,238 @@
                         <p>Designed a mobile pre-order app concept tackling long canteen lines during class breaks. Iterated the user flow after usability feedback to optimize menu availability visibility and item selection speed.</p>
                         <div class="project-tools">Figma · Wireframing · UX Flow</div>
                         <a href="https://tinyurl.com/dsf-day3-miniproject-syaira" target="_blank" class="small-project-link">View UI/UX Prototype ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PART 2: GRAPHIC DESIGN PROJECTS -->
+        <section id="graphic-design" class="section graphic-design">
+            <div class="section-heading">
+                <p>CATEGORY 02</p>
+                <h2>Graphic Design & Visual Arts.</h2>
+            </div>
+
+            <!-- SUB-CATEGORY: POSTER DESIGN -->
+            <h3 class="sub-category-title">01 / Poster Design</h3>
+            <div class="graphic-grid">
+                <article class="graphic-card">
+                    <div class="graphic-img-holder tall">
+                        <img src="POSTER PHR.jpg" alt="Puncak Hill Resto Special Menu Poster">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>RESTAURANT PROMOTION POSTER</span>
+                        <h4>Puncak Hill Resto - Special Menu Poster</h4>
+                        <p>Promotional menu poster designed for Puncak Hill Resto featuring their signature "Ayam Bakar" dish. Uses warm appetite-stimulating colors and clear pricing hierarchy to drive customer interest.</p>
+                        <div class="graphic-tools">Canva · Affinity · Visual Communication</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder tall">
+                        <img src="POSTER WISPO.png" alt="Jakarta Flood Disaster Awareness Poster">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>WISPO 2021 COMPETITION POSTER</span>
+                        <h4>Floods in Jakarta - Disaster Preparedness</h4>
+                        <p>Educational awareness poster created for the WISPO 2021 international competition. Combines custom digital art with infographic layouts to detail flood causes, environmental impacts, and prevention steps.</p>
+                        <div class="graphic-tools">Canva · Adobe Photoshop · Infographic Layout</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder tall">
+                        <img src="TUGAS SISTEM MULTIMEDIA.png" alt="Wise Social Media Use Educational Poster">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>MULTIMEDIA SYSTEM ACADEMIC PROJECT</span>
+                        <h4>Wise Social Media Usage Campaign</h4>
+                        <p>Academic campaign poster focusing on digital literacy and smart social media habits. Features vibrant illustrations and structured safety tips regarding privacy, scam awareness, and respectful communication.</p>
+                        <div class="graphic-tools">Affinity · Adobe Photoshop · Layout Design</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder tall">
+                        <img src="final poster.png" alt="Kopi Nusantara Grand Opening Promo Poster">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>LSP COMPETENCY PROJECT POSTER</span>
+                        <h4>Kopi Nusantara - Opening Promo Poster</h4>
+                        <p>Client-based promotional poster created during LSP competency practice. Highlights special opening prices for Tiramisu Latte and Coffee Latte with high-contrast food typography and sophisticated coffee tones.</p>
+                        <div class="graphic-tools">Canva · Affinity · Commercial Design</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder tall">
+                        <img src="dsf-day2-makanyuk.jpg" alt="MakanYuk Promo Poster">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>CAMPAIGN VISUAL DESIGN</span>
+                        <h4>MakanYuk Promotional Poster</h4>
+                        <p>High-converting promotional poster created for MakanYuk's "Weekly Meal Bundle". Leverages bold typography, vibrant background contrast, and strategic photography to highlight discount offers.</p>
+                        <div class="graphic-tools">Canva · Visual Communication</div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- SUB-CATEGORY: BANNER DESIGN -->
+            <h3 class="sub-category-title">02 / Banner Design</h3>
+            <div class="graphic-grid">
+                <article class="graphic-card" style="grid-column: 1 / -1;">
+                    <div class="graphic-img-holder banner-fit">
+                        <img src="banner KN.jpg" alt="Kopi Nusantara Opening Promo Horizontal Banner">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>LSP COMPETENCY BANNER</span>
+                        <h4>Kopi Nusantara - Grand Opening Promotional Banner</h4>
+                        <p>Horizontal promo banner designed for Kopi Nusantara's store launch according to client specifications. Features high-legibility promotional dates, pricing callouts, beverage visual balance, and brand aesthetic consistency.</p>
+                        <div class="graphic-tools">Affinity · Commercial Layout · Print & Digital Media</div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- SUB-CATEGORY: LOGO & PACKAGING -->
+            <h3 class="sub-category-title">03 / Logo & Packaging Design</h3>
+            <div class="graphic-grid">
+                <article class="graphic-card">
+                    <div class="graphic-img-holder">
+                        <img src="LOGO PHR.jpg" alt="Puncak Hill Resto Brand Logo Design">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>BRAND IDENTITY</span>
+                        <h4>Puncak Hill Resto - Official Logo</h4>
+                        <p>Minimalist brand mark incorporating mountain peaks and pine trees, reflecting the cool highland dining experience of Puncak Hill Resto.</p>
+                        <div class="graphic-tools">Affinity · Vector Design · Logo Design</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder">
+                        <img src="packaging PHR.png" alt="Puncak Hill Resto Product Packaging Mockup">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>PRODUCT PACKAGING MOCKUP</span>
+                        <h4>Puncak Hill Resto - Eco Packaging System</h4>
+                        <p>Applied brand identity across takeaway coffee cups, food wrapping paper, and eco-friendly shopping bags in natural forest green tones.</p>
+                        <div class="graphic-tools">Affinity · Packaging Design · Branding</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder">
+                        <img src="LOGO KN.jpg" alt="Kopi Nusantara Brand Logo Design">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>BRAND IDENTITY</span>
+                        <h4>Kopi Nusantara - Official Logo</h4>
+                        <p>Playful character-infused brand mark combining a coffee cup silhouette with friendly facial expressions, creating an approachable identity for Indonesian coffee lovers.</p>
+                        <div class="graphic-tools">Affinity · Vector Graphics · Character Branding</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder">
+                        <img src="packaging KN.jpg" alt="Kopi Nusantara Coffee Packaging Mockup">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>PRODUCT PACKAGING MOCKUP</span>
+                        <h4>Kopi Nusantara - Coffee Cup & Snack Packaging</h4>
+                        <p>Minimalist kraft paper packaging suite for coffee cups and takeaway food wraps, emphasizing sustainability and authentic local coffee culture.</p>
+                        <div class="graphic-tools">Affinity · Packaging Design · Branding</div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- SUB-CATEGORY: DIGITAL ILLUSTRATION -->
+            <h3 class="sub-category-title">04 / Digital Illustration</h3>
+            <div class="graphic-grid three-col">
+                <article class="graphic-card">
+                    <div class="graphic-img-holder tall">
+                        <img src="DSIGN DIGITAL 1.jpg" alt="Swiss Countryside Settlement Digital Illustration">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>CONCEPT LANDSCAPE ART</span>
+                        <h4>Swiss Countryside Settlement</h4>
+                        <p>Digital landscape illustration inspired by Swiss mountain villages, featuring grazing sheep, winding streams, and soft atmospheric lighting.</p>
+                        <div class="graphic-tools">ibisPaint X · Environment Art</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder tall">
+                        <img src="DESIGN DIGITAL 2.jpg" alt="Rainy Mountain Night Digital Illustration">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>ATMOSPHERIC ILLUSTRATION</span>
+                        <h4>Rainy Mountain Path</h4>
+                        <p>Moody night scene illustration capturing rainfall over a flower-lined hill path under moonlight, painted with rich textures and lighting depth.</p>
+                        <div class="graphic-tools">Infinite Painter · Atmospheric Art</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder tall">
+                        <img src="DESIGN DIGITAL 3.jpg" alt="Heal The Forest Campaign Digital Art">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>ENVIRONMENTAL CAMPAIGN ART</span>
+                        <h4>"Heal The Forest and The Air"</h4>
+                        <p>Social awareness digital illustration published to support forest restoration in Indonesia following wildfires, depicting a vibrant flower canopy framed against clear blue skies.</p>
+                        <div class="graphic-tools">ibisPaint X · Environmental Art</div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- SUB-CATEGORY: 3D ART & ANIMATION -->
+            <h3 class="sub-category-title">05 / 3D Art & Animation</h3>
+            <div class="graphic-grid">
+                <article class="graphic-card">
+                    <div class="graphic-img-holder">
+                        <img src="final modeling (Dapur & Pot).png" alt="3D Kitchen Interior Design Render">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>3D INTERIOR DESIGN</span>
+                        <h4>3D Kitchen & Dining Space (Final Render)</h4>
+                        <p>Complete 3D architectural interior environment featuring customized wooden cabinets, dining furniture, kitchen appliances, realistic window lighting, and plant props integrated into a cohesive space.</p>
+                        <div class="graphic-tools">Blender 3D · Cycles Render · Environment Modeling</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder">
+                        <img src="Modeling Karakter Lebah.png" alt="3D Bee Character Modeling">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>3D CHARACTER MODELING</span>
+                        <h4>3D Animated Bee Character</h4>
+                        <p>Stylized 3D character model of an animated bee featuring T-pose rigging setup, custom mesh topology, and colorful cartoon texturing prepared for 3D animation.</p>
+                        <div class="graphic-tools">Blender 3D · Character Rigging · 3D Modeling</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder">
+                        <img src="Modelling Ruangan Dapur.png" alt="3D Kitchen Clay Render">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>3D ENVIRONMENT PROCESS</span>
+                        <h4>Kitchen Room Base Mesh & Lighting Setup</h4>
+                        <p>Clay render pass of the kitchen environment showcasing architectural wall layouts, window blinds detail, shadow directions, and surface geometry before texturing.</p>
+                        <div class="graphic-tools">Blender 3D · Lighting Setup · Mesh Modeling</div>
+                    </div>
+                </article>
+
+                <article class="graphic-card">
+                    <div class="graphic-img-holder">
+                        <img src="Modelling Property Dapur.png" alt="3D Dining Table Property Render">
+                    </div>
+                    <div class="graphic-card-info">
+                        <span>3D PROP MODELING</span>
+                        <h4>Dining Table & Tableware Prop Modeling</h4>
+                        <p>High-detail prop modeling pass focusing on wooden dining table geometry, chair ergonomics, glass stemware, and tableware assets constructed for the kitchen scene.</p>
+                        <div class="graphic-tools">Blender 3D · Prop Modeling · Mesh Subdivision</div>
                     </div>
                 </article>
             </div>
@@ -1255,7 +1513,7 @@
         });
 
         const revealElements = document.querySelectorAll(
-            ".section-heading, .about-grid, .service-card, .skill-group, .project, .small-project, .experience-item, .achievement-card, .certificate-card, .gallery-item"
+            ".section-heading, .about-grid, .service-card, .skill-group, .project, .small-project, .graphic-card, .experience-item, .achievement-card, .certificate-card, .gallery-item"
         );
 
         const observer = new IntersectionObserver((entries) => {
