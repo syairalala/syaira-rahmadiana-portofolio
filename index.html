@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syaira Rahmadiana | Portofolio</title>
+    <title>Syaira Rahmadiana | UI/UX & Graphic Designer Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +31,9 @@
             --sage: #c2e9ff;                
             --purple-glow: #7a5cff;         
             --white: #f0f8ff;                
-            --gray: #9bb0cd;                
-            --dark-gray: #425878;            
-            --border: rgba(138, 226, 255, 0.15); 
+            --gray: #a5b9d6;                
+            --dark-gray: #5e7699;            
+            --border: rgba(138, 226, 255, 0.18); 
         }
 
         body {
@@ -236,11 +236,11 @@
 
         /* SERVICES */
         .what-i-do { background: transparent; backdrop-filter: none; }
-        .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
         .service-card { padding: 28px; border: 1px solid var(--border); background: rgba(14, 23, 46, 0.5); backdrop-filter: blur(10px); border-radius: 16px; position: relative; transition: all 0.3s ease; }
         .service-card:hover { transform: translateY(-6px); border-color: var(--blue); box-shadow: 0 10px 30px rgba(138, 226, 255, 0.15); }
         .service-icon { width: 50px; height: 50px; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 20px; margin-bottom: 25px; background: rgba(138, 226, 255, 0.05); }
-        .service-card h3 { font-size: 22px; margin-bottom: 12px; text-align: left; }
+        .service-card h3 { font-size: 20px; margin-bottom: 12px; text-align: left; }
         .service-card p { color: var(--gray); font-size: 13px; margin-bottom: 20px; }
         .service-tags { display: flex; gap: 6px; flex-wrap: wrap; }
         .service-tags span { padding: 5px 9px; border: 1px solid var(--border); border-radius: 20px; color: var(--gray); font-family: "DM Mono", monospace; font-size: 8px; background: rgba(6, 11, 25, 0.8); }
@@ -254,7 +254,8 @@
 
         /* PROJECTS */
         .project.featured { display: grid; grid-template-columns: 1.3fr 0.9fr; background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
-        
+        .project.featured + .project.featured { margin-top: 30px; }
+
         .project-visual { 
             padding: 50px 35px; 
             display: flex; 
@@ -279,9 +280,7 @@
         .project-button:hover { background: var(--blue); color: var(--background); }
         .project-buttons-row { display: flex; gap: 10px; flex-wrap: wrap; }
 
-        .project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
-        .project-row.single { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
-        .project-row.triple { grid-template-columns: repeat(3, 1fr); }
+        .project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
         .small-project { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease; }
         .small-project:hover { transform: translateY(-5px); border-color: var(--blue); }
         .project-image { height: 210px; position: relative; overflow: hidden; }
@@ -295,7 +294,7 @@
         .small-project-link { display: inline-block; width: fit-content; margin-top: 14px; padding: 10px 16px; border: 1px solid var(--blue); border-radius: 25px; font-size: 10px; color: var(--blue); font-family: "Inter", sans-serif; transition: 0.3s; }
         .small-project-link:hover { background: var(--blue); color: var(--background); }
 
-        /* CASE STUDY REVISED STYLES (CLEAN & SEAMLESS) */
+        /* CASE STUDY REVISED STYLES */
         .case-study-toggle {
             width: fit-content;
             padding: 10px 16px;
@@ -358,19 +357,6 @@
             object-fit: contain; 
         }
 
-        .case-study-img-wrapper.userflow-wrapper {
-            height: auto; 
-            max-height: none;
-            padding: 20px;
-        }
-
-        .case-study-img-wrapper.userflow-wrapper img {
-            width: 100%;
-            height: auto;
-            max-height: none;
-            object-fit: contain;
-        }
-
         .case-study-images figcaption { 
             padding: 12px 18px 18px 18px; 
             color: var(--gray); 
@@ -378,7 +364,6 @@
             text-align: justify; 
             text-justify: inter-word;
             line-height: 1.6; 
-            border-top: none; 
             margin-top: auto; 
         }
 
@@ -417,7 +402,6 @@
         .achievement-image img { width: 100%; height: 100%; object-fit: cover; }
 
         .certificate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .certificate-grid.single { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
         .certificate-card { background: rgba(14, 23, 46, 0.6); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: 0.3s; }
         .certificate-card:hover { border-color: var(--blue); }
         .certificate-image { height: 200px; overflow: hidden; }
@@ -442,9 +426,7 @@
 
         footer { padding: 20px 7%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; color: var(--dark-gray); font-family: "DM Mono", monospace; font-size: 9px; background: rgba(6, 11, 25, 0.9); flex-wrap: wrap; gap: 10px; }
 
-        /* =========================================
-           RESPONSIVE MEDIA QUERIES
-        ========================================= */
+        /* RESPONSIVE MEDIA QUERIES */
         @media (max-width: 992px) {
             .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 110px; }
             .hero-left { text-align: center; }
@@ -452,13 +434,12 @@
             .hero-buttons { justify-content: center; }
             
             .about-grid { grid-template-columns: 1fr; gap: 30px; }
-            .service-grid { grid-template-columns: repeat(2, 1fr); }
+            .service-grid { grid-template-columns: 1fr; }
             
             .skill-group { grid-template-columns: 1fr; gap: 10px; }
             .skill-title h3 { margin-bottom: 5px; }
 
             .project.featured { grid-template-columns: 1fr; }
-            .project-row.triple { grid-template-columns: 1fr 1fr; }
             .achievement-card { grid-template-columns: 1fr; }
             .achievement-left { padding: 25px; }
             .achievement-left h3 { margin-top: 0; }
@@ -483,13 +464,8 @@
                 transition: left 0.3s ease;
             }
 
-            .navbar nav.active {
-                left: 0;
-            }
-
-            .navbar nav a {
-                font-size: 18px;
-            }
+            .navbar nav.active { left: 0; }
+            .navbar nav a { font-size: 18px; }
 
             .service-grid, .project-row, .certificate-grid { grid-template-columns: 1fr; }
             .achievement-right { grid-template-columns: 1fr; }
@@ -528,6 +504,7 @@
         <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
         <nav id="nav-menu">
             <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
             <a href="#skills" class="nav-link">Skills</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#experience" class="nav-link">Experience</a>
@@ -540,10 +517,10 @@
         <!-- HERO -->
         <section id="home" class="hero">
             <div class="hero-left">
-                <div class="status"><span></span> AVAILABLE FOR INTERNSHIP</div>
+                <div class="status"><span></span> OPEN FOR UI/UX & DESIGN INTERNSHIPS</div>
                 <h1>Hi, I'm <br><span>Syaira.</span></h1>
-                <h2>Crafting intuitive digital experiences, <span>backed by data & systems thinking.</span></h2>
-                <p class="hero-description">Hello, I'm Syaira Rahmadiana! An Information Systems undergraduate passionate about UI/UX design and frontend development — designing user-centered interfaces in Figma and bringing them to life with HTML, CSS, and JavaScript. I focus on turning user needs into digital experiences that are intuitive, accessible, and genuinely useful.</p>
+                <h2>Crafting user-centered interfaces & visual experiences, <span>backed by systems thinking.</span></h2>
+                <p class="hero-description">Hello, I'm Syaira Rahmadiana! An Information Systems undergraduate specializing in <strong>UI/UX Design</strong> and <strong>Graphic Design</strong>. I design intuitive visual systems and digital experiences in Figma and Canva, bridging human-centered design principles with clean frontend execution in HTML, CSS, and JavaScript.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="button-primary">Explore My Work <span>↗</span></a>
                     <a href="#contact" class="button-secondary">Contact Me</a>
@@ -558,23 +535,23 @@
                     </div>
                     <div class="system-body">
                         <div class="photo-frame">
-                            <img src="profile.jpg" alt="Syaira Rahmadiana">
+                            <img src="profile.jpg" alt="Syaira Rahmadiana - UI/UX Designer">
                         </div>
                         <div class="system-info">
                             <p class="mono green">SYSTEM.USER</p>
                             <h3>Syaira Rahmadiana</h3>
-                            <p>Information Systems</p>
+                            <p>UI/UX & Graphic Designer</p>
                             <div class="divider"></div>
-                            <p class="mono green">CURRENT_FOCUS</p>
+                            <p class="mono green">CORE_SKILLS</p>
                             <div class="focus-list">
                                 <div><span>UI/UX DESIGN</span><b>96%</b></div>
-                                <div><span>GRAPHIC DESIGN</span><b>80%</b></div>
-                                <div><span>FRONTEND DEV</span><b>85%</b></div>
+                                <div><span>GRAPHIC DESIGN</span><b>90%</b></div>
+                                <div><span>FRONTEND DEV</span><b>80%</b></div>
                             </div>
                         </div>
                     </div>
                     <div class="card-bottom">
-                        <span>STATUS</span><strong>INTERNSHIP READY</strong>
+                        <span>STATUS</span><strong>AVAILABLE FOR INTERNSHIP</strong>
                     </div>
                 </div>
             </div>
@@ -587,43 +564,43 @@
             </div>
             <div class="about-grid">
                 <div class="about-main">
-                    <p class="big-text">Turning user needs into intuitive, well-designed digital experiences.</p>
-                    <p>I am a 7th-semester Information Systems student at Universitas Gunadarma with a strong foundation in UI/UX design and frontend development. My journey in tech is driven by curiosity about how people actually use digital products, and how thoughtful design — through Human-Centered Design and Design Thinking — can make complex systems feel simple and intuitive. With hands-on experience as a Laboratory Assistant, I thrive in environments where analytical thinking, technical problem-solving, and clear communication intersect to create meaningful technology solutions.</p>
+                    <p class="big-text">Transforming user problems into seamless digital interfaces and compelling visuals.</p>
+                    <p>I am a 7th-semester Information Systems student at Universitas Gunadarma deeply invested in <strong>UI/UX Design</strong> and <strong>Visual Communication</strong>. My focus is on turning complex user workflows into clean, human-centered digital experiences using design systems, wireframing, and interactive prototyping. Supported by technical experience as an Information Systems Laboratory Assistant, I bring analytical structure, usability focus, and visual clarity to every project.</p>
                 </div>
                 <div class="about-facts">
+                    <div class="fact"><span>ROLE FOCUS</span><strong>UI/UX & Graphic Design</strong><small>Digital Products & Visuals</small></div>
                     <div class="fact"><span>EDUCATION</span><strong>Information Systems</strong><small>Universitas Gunadarma</small></div>
-                    <div class="fact"><span>SEMESTER</span><strong>07</strong><small>Undergraduate Student</small></div>
-                    <div class="fact"><span>GPA</span><strong>3.66</strong><small>Current GPA</small></div>
-                    <div class="fact"><span>INTEREST</span><strong>UI/UX · Frontend Dev</strong><small>Digital Solutions</small></div>
+                    <div class="fact"><span>GPA</span><strong>3.66</strong><small>Current Academic Record</small></div>
+                    <div class="fact"><span>TOOLS</span><strong>Figma · Canva · Adobe</strong><small>Primary Design Tools</small></div>
                 </div>
             </div>
         </section>
 
         <!-- SERVICES -->
-        <section class="what-i-do">
+        <section id="services" class="what-i-do">
             <div class="section">
                 <div class="section-heading">
                     <p>WHAT I DO</p>
-                    <h2>Where technology meets people.</h2>
+                    <h2>Where human-centered design meets aesthetic perfection.</h2>
                 </div>
                 <div class="service-grid">
                     <div class="service-card">
                         <div class="service-icon">◇</div>
-                        <h3>Design</h3>
-                        <p>Crafting human-centered interfaces, structured user flows, and wireframes based on usability principles. Focused on simplifying user journeys and ensuring digital interactions are intuitive, accessible, and visually engaging.</p>
-                        <div class="service-tags"><span>Wireframing</span><span>Mockup</span><span>Prototyping</span></div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">⟨/⟩</div>
-                        <h3>Build</h3>
-                        <p>Translating wireframes and design systems into clean, responsive web pages. Focused on writing structured markup and styles that bring a UI/UX design to life faithfully across desktop and mobile.</p>
-                        <div class="service-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <h3>UI/UX Design</h3>
+                        <p>Designing seamless product experiences from ground-zero user research, wireframing, interactive prototyping, and System Usability Testing (SUS) to ensure intuitive user flows.</p>
+                        <div class="service-tags"><span>User Research</span><span>Wireframing</span><span>Prototyping</span><span>Figma</span></div>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">✦</div>
-                        <h3>Design</h3>
-                        <p>Turning briefs into visual designs — layout, color, and typography choices that communicate a message clearly, whether it's a promotional poster or supporting graphics for a digital product.</p>
-                        <div class="service-tags"><span>Color Theory</span><span>Layout</span><span>Typography</span></div>
+                        <h3>Graphic & Visual Design</h3>
+                        <p>Creating promotional visuals, brand graphics, digital layouts, and campaign materials that tell clear visual stories using color theory, grid systems, and strategic typography.</p>
+                        <div class="service-tags"><span>Typography</span><span>Layout & Grid</span><span>Color Theory</span><span>Branding</span></div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⟨/⟩</div>
+                        <h3>Frontend Implementation</h3>
+                        <p>Bridging design and code by translating Figma mockups into structured, responsive, and pixel-perfect web interfaces built with clean HTML, CSS, and JavaScript.</p>
+                        <div class="service-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div>
                     </div>
                 </div>
             </div>
@@ -633,7 +610,7 @@
         <section id="skills" class="section skills">
             <div class="section-heading">
                 <p>SKILLS & TOOLS</p>
-                <h2>My digital toolkit.</h2>
+                <h2>My design & creative toolkit.</h2>
             </div>
             <div class="skills-container">
                 <div class="skill-group">
@@ -641,22 +618,29 @@
                     <div class="skill-items">
                         <span>Figma</span>
                         <span>Wireframing</span>
-                        <span>Mockup</span>
-                        <span>Prototyping</span>
+                        <span>High-Fidelity Mockups</span>
+                        <span>Interactive Prototyping</span>
                         <span>User Research</span>
-                        <span>User Flow</span>
-                        <span>User-Centered Design</span>
-                        <span>Human-Centered Design</span>
+                        <span>User Flow Mapping</span>
                         <span>Design Thinking</span>
+                        <span>Usability Testing (SUS & SEQ)</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-title"><h3>GRAPHIC & VISUAL DESIGN</h3></div>
+                    <div class="skill-items">
+                        <span>Canva</span>
+                        <span>Adobe Photoshop</span>
+                        <span>Affinity</span>
+                        <span>Typography & Layout</span>
+                        <span>Color Theory</span>
+                        <span>Visual Branding</span>
+                        <span>Social Media Graphics</span>
                     </div>
                 </div>
                 <div class="skill-group">
                     <div class="skill-title"><h3>FRONTEND DEVELOPMENT</h3></div>
-                    <div class="skill-items"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
-                </div>
-                <div class="skill-group">
-                    <div class="skill-title"><h3>GRAPHIC DESIGN</h3></div>
-                    <div class="skill-items"><span>Affinity</span><span>Adobe Photoshop</span><span>Canva</span><span>Layout & Grid System</span><span>Color Theory</span><span>Typography</span></div>
+                    <div class="skill-items"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>Responsive Web Design</span></div>
                 </div>
             </div>
         </section>
@@ -665,77 +649,77 @@
         <section id="projects" class="section projects">
             <div class="section-heading">
                 <p>SELECTED PROJECTS</p>
-                <h2>Things I've worked on.</h2>
+                <h2>Featured UI/UX & Design Work.</h2>
             </div>
 
-            <!-- PROJECT 1 -->
+            <!-- FEATURED PROJECT 1: AKSIAGA -->
             <article class="project featured">
                 <div class="project-visual">
                     <div class="phone-stack">
                         <div class="phone-frame secondary">
-                            <img src="puncakhill-4.jpg" alt="Puncak Hill Resto">
+                            <img src="aksiaga mockup peta.jpg" alt="AKSIAGA Navigation Interface">
                         </div>
                         <div class="phone-frame primary">
-                            <img src="puncakhill-1.jpg" alt="Puncak Hill Resto UI">
+                            <img src="aksiaga mockup beranda.jpg" alt="AKSIAGA Home Alert System UI">
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
-                    <div class="project-meta"><span>UI/UX · UCD · FIGMA</span></div>
-                    <h3>Puncak Hill Resto</h3>
-                    <p>Puncak Hill Resto is a User-Centered Design (UCD) initiative developed to streamline and modernize the food ordering experience for local dining establishments. The project focused on reducing customer order latency and removing friction during menu selection. Through iterative prototyping, visual hierarchy redesign, and rigorous usability testing in Figma, the solution achieved a System Usability Scale (SUS) score of 82.6 (Grade B), confirming its effectiveness and ease of use.</p>
+                    <div class="project-meta"><span>UI/UX CASE STUDY · HCD METHODOLOGY · FIGMA</span></div>
+                    <h3>AKSIAGA</h3>
+                    <p>AKSIAGA adalah aplikasi tanggap darurat bencana yang dirancang menggunakan metode Human-Centered Design (HCD). Pengembangan aplikasi ini didasari oleh wawancara mendalam bersama 7 narasumber untuk memahami kebutuhan navigasi evakuasi, panduan siaga, dan akses kontak darurat saat kondisi krisis. Melalui evaluasi terstruktur, AKSIAGA berhasil memperoleh skor Single Ease Question (SEQ) sebesar 6.86/7 serta System Usability Scale (SUS) sebesar 89.9 (Grade A / Excellent).</p>
                     <div class="project-result">
-                        <div><strong>82.6</strong><span>SUS SCORE</span></div>
-                        <div><strong>B</strong><span>GRADE</span></div>
+                        <div><strong>89.9</strong><span>SUS SCORE (GRADE A)</span></div>
+                        <div><strong>6.86</strong><span>SEQ SCORE</span></div>
                     </div>
                     <div class="project-buttons-row">
-                        <a href="https://tinyurl.com/Prototype-PuncakHillResto" target="_blank" class="project-button">View Prototype ↗</a>
-                        <button class="case-study-toggle" onclick="toggleCaseStudy('puncakhill-case')">View Design Process</button>
+                        <a href="#" target="_blank" class="project-button">View Prototype ↗</a>
+                        <button class="case-study-toggle" onclick="toggleCaseStudy('aksiaga-case', this)">View Design Process</button>
                     </div>
                 </div>
 
-                <!-- CASE STUDY / DESIGN PROCESS -->
-                <div class="case-study" id="puncakhill-case">
+                <!-- CASE STUDY / DESIGN PROCESS AKSIAGA -->
+                <div class="case-study" id="aksiaga-case">
                     <div class="case-study-inner">
                         <!-- 01. WIREFRAME / LO-FI -->
                         <div class="case-study-stage">
                             <h4>01 — Wireframe / Lo-Fi Design</h4>
-                            <p>At this stage, I structured the core layout of Puncak Hill Resto's app through low-fidelity wireframes in Figma, as part of the User-Centered Design (UCD) process. The goal was to validate the flow and information hierarchy first, before moving into visual design — so structural and navigation issues could be identified and fixed early, without the distraction of color or typography.</p>
+                            <p>Pada tahap awal, alur dan struktur antarmuka AKSIAGA dipetakan dalam bentuk low-fidelity wireframes di Figma berdasarkan kebutuhan yang diidentifikasi dari 7 narasumber. Fokus utama tahap ini adalah memastikan hierarki informasi darurat dan aksesibilitas fitur utama dapat diakses tanpa hambatan visual.</p>
                             
                             <div class="case-study-images">
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="puncakhill-wireframe-home.jpg" alt="Wireframe Home & Menu">
+                                        <img src="aksiaga wireframe beranda.jpg" alt="Wireframe Beranda Peringatan">
                                     </div>
                                     <figcaption>
-                                        <strong>Home & Menu:</strong> This flow maps out how users discover and select food. The home page surfaces the main promo and visitors' favorite items at the top to speed up ordering decisions, while menu categories (Makanan, Sayur, Snack, Minuman) let users filter choices quickly. Each category lists items with clear pricing, and the cart status stays visible at the bottom of the screen so users remain aware of their order without leaving the page.
-                                    </figcaption>
-                                </figure>
-                                
-                                <figure>
-                                    <div class="case-study-img-wrapper">
-                                        <img src="puncakhill-wireframe-cart.jpg" alt="Wireframe Cart & Checkout">
-                                    </div>
-                                    <figcaption>
-                                        <strong>Cart & Checkout:</strong> This flow was designed to minimize friction when completing an order. When the cart is empty, users are redirected back to the menu with a clear message. Once items are added, the "Your Order" page shows the order summary alongside customer details (name, table number, additional notes) in a single view, so users don't have to jump between screens. The checkout stage then presents a transparent billing breakdown (subtotal, tax, total) along with several payment methods (QRIS, Virtual Account, Cash on Site), each with a short description to help users choose confidently.
+                                        <strong>Beranda Peringatan:</strong> Menyajikan indikator status siaga bertingkat (Pantau, Bersiap, Bertindak, Evakuasi) beserta tindakan cepat yang perlu dilakukan penggunanya.
                                     </figcaption>
                                 </figure>
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="puncakhill-wireframe-pesanan.jpg" alt="Wireframe Orders">
+                                        <img src="aksiaga wireframe peta.jpg" alt="Wireframe Peta Evakuasi">
                                     </div>
                                     <figcaption>
-                                        <strong>Orders:</strong> This page acts as a summary users can revisit to check their order status, showing the order details and a button to track status directly. If no order has been placed yet, an empty state message redirects users back to the menu, so this page never leaves them stuck.
+                                        <strong>Peta & Rute Evakuasi:</strong> Menampilkan rute evakuasi menuju titik aman terdekat serta panduan arah langkah demi langkah untuk menghindari area berbahaya.
                                     </figcaption>
                                 </figure>
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="puncakhill-wireframe-about.jpg" alt="Wireframe About Us">
+                                        <img src="aksiaga wireframe panduan.jpg" alt="Wireframe Panduan & Tas Siaga">
                                     </div>
                                     <figcaption>
-                                        <strong>About Us:</strong> This page provides supporting information users need before or after ordering — address, operating hours, contact, and a short restaurant description. Information is grouped into separate cards for quick scanning, rather than long paragraphs users have to read in full.
+                                        <strong>Panduan & Tas Siaga:</strong> Struktur informasi edukasi bencana berdasarkan tahapan (Sebelum, Saat, Sesudah) serta checklist barang Tas Siaga Bencana.
+                                    </figcaption>
+                                </figure>
+
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="aksiaga wireframe kontak.jpg" alt="Wireframe Kontak Darurat">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Kontak Darurat:</strong> Memfasilitasi panggilan cepat satu-klik (one-tap call) ke layanan darurat nasional seperti Basarnas, Damkar, dan Polisi.
                                     </figcaption>
                                 </figure>
                             </div>
@@ -744,42 +728,42 @@
                         <!-- 02. HIGH-FIDELITY MOCKUP -->
                         <div class="case-study-stage" style="margin-top: 40px;">
                             <h4>02 — High-Fidelity Mockup</h4>
-                            <p>After validating the structure through wireframes, I moved into high-fidelity mockups in Figma, applying the final visual design — color palette, typography, food photography, and iconography — to reflect Puncak Hill Resto's warm, mountain-inspired dining atmosphere. The green and cream color scheme was chosen to evoke a natural, welcoming feel consistent with the restaurant's setting, while product photos and category icons were added to make browsing more visually engaging and help users recognize menu items faster than text alone.</p>
+                            <p>Desain wireframe diterjemahkan ke dalam antarmuka high-fidelity menggunakan Figma. Sistem warna dinamis berbasis tingkat ancaman (Biru = Waspada, Kuning = Bersiap, Oranye = Bertindak, Merah = Evakuasi) diterapkan untuk memberikan respons visual seketika kepada pengguna dalam keadaan darurat.</p>
                             
                             <div class="case-study-images">
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="puncakhill-mockup-home.jpg" alt="Mockup Home & Menu">
+                                        <img src="aksiaga mockup beranda.jpg" alt="Hi-Fi Beranda Peringatan AKSIAGA">
                                     </div>
                                     <figcaption>
-                                        <strong>Home & Menu:</strong> The home page now leads with a full-width hero image of the featured promo, paired with warmer visual cues like the "Pesan Sekarang" button placed directly on the highlighted item. Category tabs use both icons and color states (active category highlighted in green) to make filtering feel more intuitive, and each menu item now displays a product photo alongside its price to support quicker decision-making.
+                                        <strong>Beranda Peringatan:</strong> Penanda status dinamis dengan kode warna tajam dan daftar aksi cepat yang dapat dicentang langsung oleh pengguna.
                                     </figcaption>
                                 </figure>
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="puncakhill-mockup-cart.jpg" alt="Mockup Cart & Checkout">
+                                        <img src="aksiaga mockup peta.jpg" alt="Hi-Fi Navigation Map UI">
                                     </div>
                                     <figcaption>
-                                        <strong>Cart & Checkout:</strong> The cart and checkout flow carries over the same information structure from the wireframe stage, now refined with product thumbnails, clear input field styling, and consistent button hierarchy — the primary action ("Lanjut Ke Checkout", "Bayar Sekarang") is always the most visually prominent element on each screen, guiding users toward task completion without hesitation.
+                                        <strong>Peta Evakuasi Interaktif:</strong> Antarmuka navigasi langsung yang memberi panduan visual menghindari area tergenang/berbahaya hingga tiba di titik aman.
                                     </figcaption>
                                 </figure>
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="puncakhill-mockup-pesanan.jpg" alt="Mockup Orders">
+                                        <img src="aksiaga mockup panduan.jpg" alt="Hi-Fi Panduan Siaga & Tas Siaga">
                                     </div>
                                     <figcaption>
-                                        <strong>Orders:</strong> The Orders page keeps its two states (order summary vs. empty state) but now uses stronger visual contrast — a white card against the green background — to draw attention to the order details.
+                                        <strong>Panduan Bencana & Checklist:</strong> Menampilkan status kesiapan barang Tas Siaga Bencana (misal: 4 dari 6 siap) dan panduan langkah pra/pasca bencana.
                                     </figcaption>
                                 </figure>
 
                                 <figure>
                                     <div class="case-study-img-wrapper">
-                                        <img src="puncakhill-mockup-about.jpg" alt="Mockup About Us">
+                                        <img src="aksiaga mockup kontak.jpg" alt="Hi-Fi Dial Call & Emergency Contact UI">
                                     </div>
                                     <figcaption>
-                                        <strong>About Us:</strong> The About Us page introduces a real restaurant photo and a location-tagged image, giving users a tangible sense of the place before they visit, alongside the same card-based layout used in the wireframe for quick-scan information like address, hours, and contact.
+                                        <strong>Panggilan Kontak Darurat:</strong> Desain tombol panggil yang besar dan minim distraksi untuk memudahkan penelepon saat panik atau terdesak.
                                     </figcaption>
                                 </figure>
                             </div>
@@ -788,33 +772,151 @@
                 </div>
             </article>
 
-            <!-- PROJECT 2 & 3 -->
+            <!-- FEATURED PROJECT 2: PUNCAK HILL RESTO -->
+            <article class="project featured">
+                <div class="project-visual">
+                    <div class="phone-stack">
+                        <div class="phone-frame secondary">
+                            <img src="puncakhill-4.jpg" alt="Puncak Hill Resto App Interface">
+                        </div>
+                        <div class="phone-frame primary">
+                            <img src="puncakhill-1.jpg" alt="Puncak Hill Resto UI Prototype">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta"><span>UI/UX CASE STUDY · UCD METHODOLOGY · FIGMA</span></div>
+                    <h3>Puncak Hill Resto</h3>
+                    <p>Puncak Hill Resto is a User-Centered Design (UCD) initiative designed to modernize the dining order experience. The project focused on reducing menu search latency and streamlining checkout friction. Through iterative prototyping in Figma and usability evaluation, the application achieved an exceptional System Usability Scale (SUS) score of 82.6 (Grade B).</p>
+                    <div class="project-result">
+                        <div><strong>82.6</strong><span>SUS SCORE</span></div>
+                        <div><strong>B</strong><span>GRADE</span></div>
+                    </div>
+                    <div class="project-buttons-row">
+                        <a href="https://tinyurl.com/Prototype-PuncakHillResto" target="_blank" class="project-button">View Prototype ↗</a>
+                        <button class="case-study-toggle" onclick="toggleCaseStudy('puncakhill-case', this)">View Design Process</button>
+                    </div>
+                </div>
+
+                <!-- CASE STUDY / DESIGN PROCESS PUNCAK HILL -->
+                <div class="case-study" id="puncakhill-case">
+                    <div class="case-study-inner">
+                        <div class="case-study-stage">
+                            <h4>01 — Wireframe / Lo-Fi Design</h4>
+                            <p>Structured the core layout of Puncak Hill Resto's app using low-fidelity wireframes in Figma to validate information hierarchy and main user journeys before applying visual design elements.</p>
+                            
+                            <div class="case-study-images">
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="puncakhill-wireframe-home.jpg" alt="Wireframe Home & Menu Design">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Home & Menu Flow:</strong> Map out food discovery. Main promotional items and popular choices are placed upfront to speed up ordering decisions, with clear category filtering.
+                                    </figcaption>
+                                </figure>
+                                
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="puncakhill-wireframe-cart.jpg" alt="Wireframe Cart & Checkout Flow">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Cart & Checkout:</strong> Minimized friction during final payment. Order summary and customer notes are grouped on a single view alongside multi-payment options.
+                                    </figcaption>
+                                </figure>
+
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="puncakhill-wireframe-pesanan.jpg" alt="Wireframe Order Status Tracking">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Orders Summary:</strong> Provides real-time order status tracking with clear empty-state navigation.
+                                    </figcaption>
+                                </figure>
+
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="puncakhill-wireframe-about.jpg" alt="Wireframe Restaurant Info">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Restaurant Info:</strong> Structured essential location, hours, and contact details into readable information cards.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="case-study-stage" style="margin-top: 40px;">
+                            <h4>02 — High-Fidelity Mockup</h4>
+                            <p>Transformed wireframes into high-fidelity Figma mockups, using a natural green and cream palette, polished food imagery, and intuitive category icons to create a warm dining mood.</p>
+                            
+                            <div class="case-study-images">
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="puncakhill-mockup-home.jpg" alt="High-Fidelity Home Screen">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Hi-Fi Home & Menu:</strong> Features high-contrast hero banners, visual category tabs, and appetizing food imagery for instant user engagement.
+                                    </figcaption>
+                                </figure>
+
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="puncakhill-mockup-cart.jpg" alt="High-Fidelity Checkout UI">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Hi-Fi Cart & Checkout:</strong> Refined with product thumbnails, clear input fields, and highly visible Call-to-Action buttons.
+                                    </figcaption>
+                                </figure>
+
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="puncakhill-mockup-pesanan.jpg" alt="High-Fidelity Order Screen">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Hi-Fi Orders:</strong> Uses strong visual contrast to keep active order updates readable at a glance.
+                                    </figcaption>
+                                </figure>
+
+                                <figure>
+                                    <div class="case-study-img-wrapper">
+                                        <img src="puncakhill-mockup-about.jpg" alt="High-Fidelity About Screen">
+                                    </div>
+                                    <figcaption>
+                                        <strong>Hi-Fi About Us:</strong> Incorporates authentic restaurant imagery and location tagging.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- OTHER SMALL PROJECTS -->
             <div class="project-row">
                 <article class="small-project">
                     <div class="project-image">
-                        <img src="dsf-day2-makanyuk.jpg" alt="MakanYuk Weekly Meal Bundle Promo">
+                        <img src="dsf-day2-makanyuk.jpg" alt="MakanYuk Graphic Design Promotional Banner">
                         <span>GRAPHIC DESIGN</span>
                     </div>
                     <div class="small-project-info">
-                        <span>DSF-54.0 · DAY 2 MINI CASE</span>
-                        <h3>MakanYuk Promo</h3>
-                        <p>Translated a client brief into a promotional visual for MakanYuk's "Weekly Meal Bundle" campaign, encouraging customers to purchase a 5-day meal package. The design communicates the core value proposition — savings up to 50% plus a free drink — through bold typography, a high-contrast color scheme, and appetizing food photography, with a clear call-to-action guiding the next step.</p>
-                        <div class="project-tools">Canva</div>
-                        <a href="https://tinyurl.com/dsf-day2-miniproject-syaira" target="_blank" class="small-project-link">View Details ↗</a>
+                        <span>CAMPAIGN VISUAL DESIGN</span>
+                        <h3>MakanYuk Promo Poster</h3>
+                        <p>Translated a client brief into a high-converting promotional visual for MakanYuk's "Weekly Meal Bundle". Leveraged bold typography, high-contrast colors, and strategic food photography to highlight discount offers.</p>
+                        <div class="project-tools">Canva · Visual Communication</div>
+                        <a href="https://tinyurl.com/dsf-day2-miniproject-syaira" target="_blank" class="small-project-link">View Graphic Design ↗</a>
                     </div>
                 </article>
 
                 <article class="small-project">
                     <div class="project-image">
-                        <img src="dsf-day3-canteen.jpg" alt="Campus Canteen Pre-order App">
-                        <span>UI/UX</span>
+                        <img src="dsf-day3-canteen.jpg" alt="Campus Canteen Pre-order Mobile App UI Design">
+                        <span>UI/UX DESIGN</span>
                     </div>
                     <div class="small-project-info">
-                        <span>DSF-54.0 · DAY 3 MINI PROJECT</span>
+                        <span>MOBILE APP CONCEPT</span>
                         <h3>Campus Canteen Pre-order</h3>
-                        <p>Designed a pre-order app concept solving a real student pain point — long canteen queues and unclear menu availability during short class breaks. Mapped a 6-step user flow and three core screens (menu, order summary, pickup status), then revised the menu screen after peer testing to make sold-out items instantly clear and add quick filters, so students with a tight class gap could decide faster.</p>
-                        <div class="project-tools">Figma</div>
-                        <a href="https://tinyurl.com/dsf-day3-miniproject-syaira" target="_blank" class="small-project-link">View Details ↗</a>
+                        <p>Designed a mobile pre-order app concept tackling long canteen lines during class breaks. Iterated the user flow after usability feedback to optimize menu availability visibility and item selection speed.</p>
+                        <div class="project-tools">Figma · Wireframing · UX Flow</div>
+                        <a href="https://tinyurl.com/dsf-day3-miniproject-syaira" target="_blank" class="small-project-link">View UI/UX Prototype ↗</a>
                     </div>
                 </article>
             </div>
@@ -824,16 +926,16 @@
         <section id="experience" class="section experience">
             <div class="section-heading">
                 <p>EXPERIENCE</p>
-                <h2>Learning by doing.</h2>
+                <h2>Teaching & Design Mentorship.</h2>
             </div>
             <div class="experience-item">
                 <div class="experience-year">SEP 2025 — PRESENT</div>
                 <div class="experience-content">
                     <span>UNIVERSITAS GUNADARMA</span>
                     <h3>Information Systems Laboratory Assistant</h3>
-                    <p>Serving as an Information Systems Laboratory Assistant at Universitas Gunadarma, mentoring and guiding over 30 undergraduate students through practical technical coursework. Led practicum sessions on UI/UX Design and Web Development — guiding students through wireframing, prototyping, and user flow design in Figma, as well as building web pages with HTML, CSS, JavaScript, and PHP. Collaborated closely with faculty staff to ensure curriculum alignment and evaluate technical assignments.</p>
+                    <p>Mentoring over 30 undergraduate students in practical technical coursework. Leading hands-on practicum modules covering UI/UX Design (wireframing, user research, Figma prototyping) and web development (HTML, CSS, JS, PHP).</p>
                     <div class="experience-tags">
-                        <span>Figma</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+                        <span>Figma</span><span>UI/UX Design</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span>
                     </div>
                 </div>
             </div>
@@ -841,15 +943,9 @@
             <!-- GALLERY -->
             <div class="activity-gallery">
                 <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="lab-1.jpg" alt="Lab Activity 1">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="lab-2.jpg" alt="Lab Activity 2">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="lab-3.jpg" alt="Lab Activity 3">
-                    </div>
+                    <div class="gallery-item"><img src="lab-1.jpg" alt="Lab Teaching Activity 1"></div>
+                    <div class="gallery-item"><img src="lab-2.jpg" alt="Lab Teaching Activity 2"></div>
+                    <div class="gallery-item"><img src="lab-3.jpg" alt="Lab Teaching Activity 3"></div>
                 </div>
             </div>
         </section>
@@ -857,8 +953,8 @@
         <!-- ACHIEVEMENTS -->
         <section class="section achievement">
             <div class="section-heading">
-                <p>ACHIEVEMENT</p>
-                <h2>A few milestones.</h2>
+                <p>ACHIEVEMENTS & TRAINING</p>
+                <h2>Recognitions & Professional Growth.</h2>
             </div>
             <div class="achievement-card">
                 <div class="achievement-left">
@@ -867,11 +963,11 @@
                 </div>
                 <div class="achievement-right">
                     <div class="achievement-text">
-                        <p>Awarded the Bronze Medal at the World Innovative Science Project Olympiad (WISPO) 2021 in the Engineering and Technology category, competing against 117 international teams from 23 countries. Designed and produced a "Digital Pocketbook on Flood Disaster Mitigation in Jakarta" — planning its page layout, visual hierarchy, and iconography so that complex disaster-preparedness information would be easy for readers to understand at a glance. Also presented the project in English to an international panel of judges.</p>
+                        <p>Awarded Bronze Medal at the World Innovative Science Project Olympiad (WISPO) 2021. Designed the visual hierarchy, layout, and iconography for a digital mitigation pocketbook, competing against 117 international teams.</p>
                         <a href="https://online.fliphtml5.com/azopm/mplj/" target="_blank" class="achievement-link">Read the Pocketbook ↗</a>
                     </div>
                     <div class="achievement-image">
-                        <img src="wispo.jpg" alt="WISPO Award">
+                        <img src="wispo.jpg" alt="WISPO Award Certificate">
                     </div>
                 </div>
             </div>
@@ -879,14 +975,14 @@
             <div class="achievement-card">
                 <div class="achievement-left">
                     <span>DIBIMBING · 2026</span>
-                    <h3>DSF-54.0</h3>
+                    <h3>DSF-54.0 Certification</h3>
                 </div>
                 <div class="achievement-right">
                     <div class="achievement-text">
-                        <p>Completed DSF-54.0: Graphic Design & UI/UX, a 5-day intensive program by Dibimbing covering the end-to-end UI/UX design process. Learned design fundamentals and layout systems for print and digital, then applied a research-first approach — identifying and validating real user problems, translating insights into user flows and wireframes, and building interfaces in Figma. Practiced usability testing using real user feedback, observed a live mock interview session with real job-seeking candidates, and closed with sessions on CV-building and portfolio strategy alongside Dibimbing alumni.</p>
+                        <p>Completed Dibimbing's 5-day Graphic Design & UI/UX intensive program. Mastered end-to-end design thinking, user research, wireframing, Figma prototyping, and visual design layout principles.</p>
                     </div>
                     <div class="achievement-image">
-                        <img src="dsf-certificate.jpg" alt="DSF-54.0 Certificate">
+                        <img src="dsf-certificate.jpg" alt="Dibimbing Graphic Design & UI/UX Certificate">
                     </div>
                 </div>
             </div>
@@ -896,53 +992,46 @@
         <section id="certificates" class="section certificates">
             <div class="section-heading">
                 <p>CERTIFICATES</p>
-                <h2>Proof of the work.</h2>
+                <h2>Official Proof of Work.</h2>
             </div>
             <div class="certificate-grid">
                 <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="wispo.jpg" alt="WISPO Certificate">
-                    </div>
+                    <div class="certificate-image"><img src="wispo.jpg" alt="WISPO 2021 Award Certificate"></div>
                     <div class="certificate-info">
                         <span>WISPO · 2021</span>
-                        <h3>Bronze Award</h3>
+                        <h3>Bronze Award - Design & Tech</h3>
                         <p>World Innovative Science Project Olympiad</p>
                     </div>
                 </div>
                 <div class="certificate-card">
-                    <div class="certificate-image">
-                        <img src="dsf-certificate.jpg" alt="DSF-54.0 Certificate">
-                    </div>
+                    <div class="certificate-image"><img src="dsf-certificate.jpg" alt="Graphic Design & UI/UX Certificate"></div>
                     <div class="certificate-info">
                         <span>DIBIMBING · 2026</span>
-                        <h3>DSF-54.0: Graphic Design & UI/UX</h3>
-                        <p>5-Day Intensive Program</p>
+                        <h3>Graphic Design & UI/UX</h3>
+                        <p>5-Day Intensive Professional Program</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT METODE DENGAN IKON -->
+        <!-- CONTACT -->
         <section id="contact" class="contact">
             <div class="contact-content">
                 <p>HAVE AN OPPORTUNITY?</p>
-                <h2>Let's build something <span>meaningful.</span></h2>
+                <h2>Let's design something <span>meaningful.</span></h2>
                 <a href="mailto:syairau14@gmail.com" class="get-in-touch">Get In Touch ↗</a>
                 
                 <div class="contact-details">
-                    <!-- EMAIL ICON -->
                     <a href="mailto:syairau14@gmail.com" class="contact-item">
                         <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         <span>syairau14@gmail.com</span>
                     </a>
                     
-                    <!-- PHONE ICON -->
                     <a href="https://wa.me/message/J3I6RCP5ZWOAK1" class="contact-item">
                         <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                         <span>+62 812-1904-1337</span>
                     </a>
 
-                    <!-- INSTAGRAM ICON -->
                     <a href="https://www.instagram.com/today.lalaa?stkn=dDJ5c2xlbWloOW15" target="_blank" class="contact-item">
                         <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         <span>@today.lalaa</span>
@@ -955,7 +1044,7 @@
     <!-- FOOTER -->
     <footer>
         <div>© 2026 Syaira Rahmadiana</div>
-        <div>INFORMATION SYSTEMS</div>
+        <div>UI/UX & GRAPHIC DESIGNER</div>
         <div>UNIVERSITAS GUNADARMA</div>
     </footer>
 
@@ -978,13 +1067,14 @@
             });
         });
 
-        /* CASE STUDY TOGGLE */
-        function toggleCaseStudy(id) {
+        /* CASE STUDY TOGGLE FIXED */
+        function toggleCaseStudy(id, btn) {
             const el = document.getElementById(id);
+            if (!el) return;
             el.classList.toggle('open');
-            const btn = event.target;
-            btn.textContent = el.classList.contains('open') ? 'Hide Design Process' : 'View Design Process';
-            if (el.classList.contains('open')) {
+            const isOpen = el.classList.contains('open');
+            btn.textContent = isOpen ? 'Hide Design Process' : 'View Design Process';
+            if (isOpen) {
                 setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 300);
             }
         }
@@ -1097,14 +1187,16 @@
 
         function initStars() {
             stars = [];
-            const count = Math.floor((width * height) / 3000);
+            const density = width < 768 ? 5000 : 3000;
+            const count = Math.floor((width * height) / density);
             for (let i = 0; i < count; i++) {
                 stars.push(new Star());
             }
         }
 
         window.addEventListener('mousemove', (e) => {
-            for (let i = 0; i < 2; i++) {
+            const numSparkles = width < 768 ? 1 : 2;
+            for (let i = 0; i < numSparkles; i++) {
                 sparkles.push(new CursorSparkle(e.clientX, e.clientY));
             }
         });
